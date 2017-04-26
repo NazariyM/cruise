@@ -1,0 +1,82 @@
+body
+	+f('cr',15)
+	line-height: 1.2
+	+smooth-font
+	color: $grey
+
+h1, h2, h3, h4, h5, h6
+	font-weight: normal
+
+a
+	color: inherit
+	text-decoration: none
+	
+img
+	display: block
+	
+.out
+	overflow: hidden
+	
+.container
+	max-width: 1286px
+	margin: 0 auto
+	padding: 0 15px
+	
+.btn
+	display: inline-block
+	padding: 15px 43px
+	border-radius: 3px
+	background: $blue
+	+f('cb', 18)
+	color: #fff
+	line-height: 1.1
+	+tr(background .25s ease-out)
+	&:hover
+		background: darken($blue, 8)
+		
+.btn-transparent
+	padding: 6px 10px 6px 10px
+	background-color: transparent
+	+f('cb', 16)
+	color: $white
+	border: 2px solid $white
+	border-radius: 3px
+	
+.title-sm
+	+f('cb', 24, 36)
+	color: $white
+	
+.title-md
+	color: $grey
+	+f('cb', 40)
+	text-transform: uppercase
+	
+.title-decor
+	position: relative
+	padding: 15px
+	border-bottom: 1px solid rgba(#000, .1)
+	text-align: center
+	&::after
+		position: absolute
+		bottom: 0
+		width: 116px
+		height: 3px
+		left: calc(50% - 58px)
+		background: $blue
+		content: ''
+
+.input
+	width: 100%
+	padding: 8px 10px
+	+f('cr', 16)
+	color: $grey
+	+placeholder-color(#a8a8a8)
+	border-radius: 3px
+	
+// basic transition
+=trs
+	transition: .25s ease-out
+	
+.icon
+	display: inline-block
+	vertical-align: middle

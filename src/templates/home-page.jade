@@ -1,0 +1,109 @@
+---
+title: Рос Вояж
+---
+extends layouts/_layout
+
+block content
+	//- contact section
+	-
+		var contact = {
+		classMod: '_default _bg-1',
+		title: 'Мы можем связаться с вами уже сейчас, и предложить вам тур по вашим предпочтениям',
+		formInClassMod: 'sm',
+		titleCase: '_upper'
+		}
+	include components/_contact
+
+	//- rest section
+	-
+		var rest = {
+		classMod: '_default',
+		title: 'Ваш комфортный отдых - Наша забота'
+		}
+		var restRow = [{
+		itemDescr: 'Полная модернизация теплохода произведена',
+		itemDescrBold: 'в 2006 году',
+		picMod: '1'
+		},
+		{
+		itemDescr: 'Санузел, кондиционер, холодильник',
+		itemDescrBold: 'в каждом номере',
+		picMod: '2'
+		},
+		{
+		itemDescr: 'Капитальный ремонт был произведён',
+		itemDescrBold: 'в 2013 году',
+		picMod: '3'
+		},
+		{
+		itemDescr: 'Теплоход спроектирован и собран',
+		itemDescrBold: 'в Германии',
+		picMod: '4'
+		}];
+
+		var lookList= [{
+		colMod: 'sm',
+		pic: '1',
+		title: 'Виды кают',
+		descr: 'Просто текст без смысла'
+		},
+		{
+		colMod: 'md',
+		pic: '2',
+		title: 'Ресторан',
+		descr: 'Просто текст без смысла, в два рядка'
+		},
+		{
+		colMod: 'sm',
+		pic: '3',
+		title: 'Бар',
+		descr: 'Просто текст без смысла, в два рядка'
+		},
+		{
+		colMod: 'md',
+		pic: '4',
+		title: 'Развлекательная программа',
+		descr: 'Просто текст без смысла'
+		},
+		{
+		colMod: 'md',
+		pic: '5',
+		title: 'Экскурсионная программа',
+		descr: 'Просто текст без смысла'
+		}]
+		var restClass = '_default'
+	include components/_rest
+
+	//- cabin-types section
+	-
+		var cabinTypes = {
+		classMod: '_default',
+		title: 'Виды кают'
+		}
+		var cabinTypesRow = [{
+		title: 'Люкс',
+		pic: '1'
+		},
+		{
+		title: 'ПолуЛюкс',
+		pic: '2'
+		},
+		{
+		title: 'Стандарт',
+		pic: '3'
+		},
+		{
+		title: 'Эконом',
+		pic: '4'
+		}]
+	include components/_cabin-types
+
+	//- contact section
+	-
+		var contact = {
+		classMod: '_default _bg-2',
+		title: 'Нужна помощь? Поможем с выбором!',
+		descr: 'Оставьте заявку и менеджер свяжется с вами, чтобы подобрать вам индивидуальную программу отдыха по вашим финансовым возможностям и предпочтениям',
+		formTimeField: true
+		}
+	include components/_contact
