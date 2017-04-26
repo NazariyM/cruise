@@ -1,5 +1,5 @@
 ---
-title: Рос Вояж
+title: РосВояж
 ---
 extends layouts/_layout
 
@@ -79,23 +79,20 @@ block content
 		var cabinTypes = {
 		classMod: '_default',
 		title: 'Виды кают'
-		}
+		};
 		var cabinTypesRow = [{
 		title: 'Люкс',
 		pic: '1'
-		},
-		{
+		},{
 		title: 'ПолуЛюкс',
 		pic: '2'
-		},
-		{
+		},{
 		title: 'Стандарт',
 		pic: '3'
-		},
-		{
+		},{
 		title: 'Эконом',
 		pic: '4'
-		}]
+		}];
 	include components/_cabin-types
 
 	//- contact section
@@ -107,3 +104,34 @@ block content
 		formTimeField: true
 		}
 	include components/_contact
+
+	//- fun section
+	-
+		var fun = {
+		classMod: '_default',
+		title: 'Развлечения найдутся для каждого'
+		}
+		var funRow = [{
+		icon: 'restaurant',
+		text: 'Ресторан'
+		},{
+		icon: 'disco',
+		text: 'Диско-бар'
+		},{
+		icon: 'conference',
+		text: 'Конференц зал'
+		},{
+		icon: 'horse',
+		text: 'Детская комната'
+		},{
+		icon: 'masterclass',
+		text: 'Мастер-классы'
+		}]
+	include components/_fun
+
+	-
+		var view = {
+		classMod: '_default'
+		}
+		var viewSlider = [{ img: '1'},{ img: '2'},{img: '3'},{img: '4'},{img: 'big'},{img: '1'}]
+	include components/_view

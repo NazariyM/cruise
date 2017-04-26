@@ -1,0 +1,17 @@
+if fun ? fun : fun = []
+
+//begin fun
++b.SECTION.fun(class= fun.classMod ? fun.classMod : '')
+	+b.sect-title
+		+e.container.container
+			+b.H2.title-md= fun.title
+	+e.container.container
+		+e.row
+			mixin funItem(item)
+				+e.item
+					+e.item-pic
+						+b.I.icon(class='icon-#{item.icon}')
+					+e.item-text= item.text
+			each item in funRow
+				+funItem(item)
+//end fun

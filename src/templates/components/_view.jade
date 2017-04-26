@@ -1,0 +1,15 @@
+if view ? view : view = []
+
+//begin view
++b.view(class= view.classMod ? view.classMod : '')
+	+e.container.container
+		+e.slider.owl-carousel
+			mixin viewItem(item)
+				+e.item
+					+e.item-img(style='background-image: url(img/content/view-#{item.img}.jpg)')
+					+e.A.item-zoom(href='img/content/view-#{item.img}.jpg' data-fancybox='view')
+						+icon('icon-loupe', 'view__item-zoom-icon')
+			each item in viewSlider
+				+viewItem(item)
+
+//end view

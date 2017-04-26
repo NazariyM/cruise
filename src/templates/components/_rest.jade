@@ -2,7 +2,9 @@ if rest ? rest : rest = []
 
 //begin rest
 +b.SECTION.rest(class= rest.classMod ? rest.classMod : '')
-	+b.H2.title-md.title-decor= rest.title
+	+b.sect-title
+		+e.container.container
+			+b.H2.title-md= rest.title
 	+e.container.container
 		+e.row
 			mixin restItem(item)

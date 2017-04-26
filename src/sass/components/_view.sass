@@ -1,0 +1,43 @@
+.view
+	&__item
+		position: relative
+		padding-top: 93.45%
+		cursor: pointer
+		&-img
+			+coverdiv
+			+cover
+		&-zoom
+			+coverdiv
+			z-index: 2
+			transform: scale(.5)
+			transition: transform 0.4s cubic-bezier(0.55, 0.06, 0.68, 0.19), background 0.6s ease-in-out
+			+vertical
+		&-zoom-icon
+			display: inline-block
+			vertical-align: middle
+			font-size: 52px
+			opacity: 0
+			transform: scale(.7)
+			transition: transform 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05), opacity .5s ease-in-out
+		&:hover &-zoom
+			transform: scale(1)
+			background: rgba(#1095ff, .7)
+		&:hover &-zoom-icon
+			opacity: 1
+			transform: scale(1)
+	&__slider
+		&-arr
+			position: absolute
+			top: calc(50% - 21px)
+			background: none
+			z-index: 3
+			&_prev
+				left: 14px
+			&_next
+				right: 14px
+		&-icon
+			fill: $white
+			font-size: 42px
+		.owl-prev.disabled .view__slider-icon,
+		.owl-next.disabled .view__slider-icon
+			fill: rgba($white, .7)
