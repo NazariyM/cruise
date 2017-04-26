@@ -1,0 +1,24 @@
+if contact ? contact : contact = []
+
+//begin contact
++b.SECTION.contact(class= contact.classMod ? contact.classMod : '')
+	+e.container.container
+		+b.H3.title-sm.contact__title(class=contact.titleCase ? contact.titleCase : '')= contact.title
+		if contact.descr
+			+e.P.descr= contact.descr
+		+e.FORM
+			+e.DIV(class='form-in_#{contact.formInClassMod}')
+				+e.form-field
+					+png('user')
+					+e.INPUT(type='text' name='' placeholder='Имя').form-input.input
+				+e.form-field
+					+png('call')
+					+e.INPUT(type='text' name='' placeholder='Телефон').form-input.input
+				if contact.formTimeField
+					+e.form-field
+						+png('time')
+						+icon('icon-timepick')
+						+e.INPUT(type='text' name='' placeholder='Время звонка').form-input._timepick.input
+				+e.form-field
+					+e.BUTTON(type='submit').form-btn.btn-transparent Позвоните мне
+//end contact

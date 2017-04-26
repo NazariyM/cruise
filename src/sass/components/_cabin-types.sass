@@ -1,0 +1,48 @@
+.cabin-types
+	background-color: #f4f4f4
+	&_default
+		padding: 50px 0 30px
+	&__row
+		padding-top: 75px
+		font-size: 0
+	&__item
+		display: inline-block
+		vertical-align: top
+		width: 25%
+		padding: 0 15px
+		&-pic
+			position: relative
+		&-title
+			position: absolute
+			top: 50%
+			z-index: 1
+			width: 100%
+			padding: 0 40px
+			transform: translateY(-50%)
+			+f('cb', 39)
+			color: $white
+			text-align: center
+		&-pic
+			margin-bottom: 28px
+		&-img
+			width: 100%
+			height: 100%
+	&__benefit
+		margin-top: 30px
+		padding-left: 45px
+		&-item
+			font-size: 18px
+			&:not(:last-child)
+				margin-bottom: 8px
+		&-icon
+			display: inline-block
+			vertical-align: middle
+			margin-right: 10px
+			width: 22px
+			text-align: center
+		&-text
+			display: inline-block
+			vertical-align: middle
+			width: calc(100% - 32px)
+				
+		

@@ -1,0 +1,52 @@
+.contact
+	background: no-repeat 50% 50%/cover
+	&_default
+		padding: 20px 0 28px
+	&_bg-1
+		background-image: url('../img/bg/contact_bg-1.jpg')
+	&_bg-2
+		background-image: url('../img/bg/contact_bg-2.jpg')
+	&__title
+		text-align: center
+		&_upper
+			text-transform: uppercase
+	&__descr
+		max-width: 850px
+		margin: 0 auto
+		font-size: 20px
+		line-height: (26/20)
+		color: $white
+		text-align: center
+	&__form-in
+		margin: 17px auto 0
+		max-width: 884px
+		font-size: 0
+		text-align: center
+		+justify
+		&_sm
+			max-width: 660px
+		&_sm .contact__form-field
+			width: percentage(210 / 660)
+	&__form-field
+		position: relative
+		display: inline-block
+		vertical-align: middle
+		width: percentage(210 / 884)
+		.icon
+			position: absolute
+			top: 12px
+			left: 11px
+		.icon-timepick
+			position: absolute
+			top: 12px
+			right: 10px
+			font-size: 16px
+	&__form-input
+		padding: 8px 10px 8px 38px
+		&_timepick
+			padding: 8px 28px 8px 38px
+	&__form-btn
+		width: 100%
+		text-align-last: center
+	
+		

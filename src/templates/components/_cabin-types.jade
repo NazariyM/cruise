@@ -1,0 +1,37 @@
+if cabinTypes ? cabinTypes : cabinTypes = []
+
+//begin cabin-types
++b.SECTION.cabin-types(class= cabinTypes.classMod ? cabinTypes.classMod : '')
+	+b.H2.title-md.title-decor= cabinTypes.title
+	+e.container.container
+		+e.row
+			mixin cabinItem(item)
+				+e.item
+					+e.item-pic
+						+e.IMG(src='img/bg/illum_#{item.pic}.png').item-img
+						+e.item-title= item.title
+					+e.item-sub-pic(src='img/content/cabin-types_pic.jpg')
+					+e.UL.benefit
+						+e.LI.benefit-item
+							+e.SPAN.benefit-icon
+								+png('toilet')
+							+e.SPAN.benefit-text Санузел
+						+e.LI.benefit-item
+							+e.SPAN.benefit-icon
+								+png('refr')
+							+e.SPAN.benefit-text Холодильник
+						+e.LI.benefit-item
+							+e.SPAN.benefit-icon
+								+png('tv')
+							+e.SPAN.benefit-text Телевизор
+						+e.LI.benefit-item
+							+e.SPAN.benefit-icon
+								+png('fan')
+							+e.SPAN.benefit-text Кондиционер
+						+e.LI.benefit-item
+							+e.SPAN.benefit-icon
+								+png('sofa')
+							+e.SPAN.benefit-text Холл с диваном
+			each item in cabinTypesRow
+				+cabinItem(item)
+//end cabin-types

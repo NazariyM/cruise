@@ -1,0 +1,95 @@
+.rest
+	&_default
+		padding: 50px 0 70px
+	&__row
+		padding: 60px 0 70px
+		font-size: 0
+	&__item
+		width: 25%
+		display: inline-block
+		vertical-align: top
+		padding: 0 15px
+		text-align: center
+		&-pic
+			height: 100px
+			margin-bottom: 15px
+			+vertical
+			&::after
+				display: inline-block
+				vertical-align: middle
+				margin: 0 auto
+				content: ''
+		&-pic_1::after
+			+s('rest_1')
+		&-pic_2::after
+			+s('rest_2')
+		&-pic_3::after
+			+s('rest_3')
+		&-pic_4::after
+			+s('rest_4')
+		&-descr
+			max-width: 215px
+			margin: 0 auto
+			font-size: 18px
+			strong
+				display: block
+				+f('cb')
+				
+.look
+	&__container
+	&__in
+		max-width: 1255px
+		margin: 0 auto
+		font-size: 0
+	&__item
+		position: relative
+		display: inline-block
+		vertical-align: top
+		margin-right: 0.399%
+		margin-bottom: 0.399%
+		overflow: hidden
+		&:hover &-text
+			transform: translateY(0)
+			background: rgba(#1095ff, .9)
+		&:hover &-title
+			background: transparent
+		&:nth-child(3)
+			margin-right: 0
+		&:nth-child(5)
+			margin-right: 0
+		&_sm
+			width: percentage(310 / 1255)
+		&_md
+			width: percentage(625 / 1255)
+		&-pic
+			position: relative
+		&-img
+			+cover
+			+coverdiv
+		&-text
+			position: absolute
+			z-index: 2
+			width: 100%
+			height: 110%
+			top: 0
+			transform: translateY(55.6%)
+			text-align: center
+			color: $white
+			transition: transform .5s cubic-bezier(0.6, -0.28, 0.74, 0.05), background .7s
+		&-title
+			margin-top: 75px
+			margin-bottom: 25px
+			padding: 7px
+			background: rgba(#000, .6)
+			+f('cb', 26)
+			+tr(background .4s)
+		&-descr
+			max-width: 165px
+			margin: 0 auto
+			+f('cl', 16)
+	&__item_sm &__item-pic
+		padding-top: 100%
+	&__item_md &__item-pic
+		padding-top: 49.6%
+		
+	
