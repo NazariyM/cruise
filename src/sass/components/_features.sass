@@ -1,0 +1,53 @@
+.features
+	&_restaurant &__item
+		width: 20%
+		padding: 0
+	&_restaurant &__item-descr
+		max-width: none
+	&_restaurant &__row
+		padding: 20px 0
+	&_restaurant span
+		font-size: 16px
+	&__row
+		padding: 60px 0 70px
+		font-size: 0
+	&__item
+		width: 25%
+		display: inline-block
+		vertical-align: top
+		padding: 0 15px
+		text-align: center
+		&-pic
+			height: 100px
+			margin-bottom: 15px
+			+vertical
+			&::after
+				display: inline-block
+				vertical-align: middle
+				margin: 0 auto
+				content: ''
+		&-pic_modern::after
+			+s('modern')
+		&-pic_refrigerator::after
+			+s('refrigerator')
+		&-pic_repair::after
+			+s('repair')
+		&-pic_ship::after
+			+s('ship')
+		&-pic_menu::after
+			+s('menu')
+		&-pic_restaurant::after
+			+s('restaurant')
+		&-pic_diet::after
+			+s('diet')
+		&-pic_national::after
+			+s('national')
+		&-pic_ice-cream::after
+			+s('ice-cream')
+		&-descr
+			max-width: 215px
+			margin: 0 auto
+			font-size: 18px
+			strong
+				display: block
+				+f('cb')

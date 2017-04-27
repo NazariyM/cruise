@@ -9,5 +9,14 @@ if restaurant ? restaurant : restaurant = []
 				+png('binocular')
 				+e.SPAN Смотреть примерное меню
 	+e.container.container
-
+		+e.row
+			mixin restaurantItem(item)
+				+e.person
+					+e.person-pic
+						+e.IMG(src='img/content/#{item.img}.jpg').person-img
+					+e.person-text
+						+e.person-name= item.name
+						+e.person-pos= item.position
+			each item in restaurantRow
+				+restaurantItem(item)
 //end restaurant

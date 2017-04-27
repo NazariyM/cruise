@@ -1,0 +1,17 @@
+if look ? look : look = []
+
+//begin look
++b.look(class= lookClass ? lookClass : '')
+	+b.look
+		+e.container.container
+			+e.in
+				mixin lookItem(item)
+					+e.A(href='#!' class='item _' + item.colMod)
+						+e.DIV.item-pic
+							+e.item-img(style="background-image: url(img/content/look_#{item.pic}.jpg)")
+						+e.DIV.item-text
+							+e.item-title= item.title
+							+e.item-descr= item.descr
+				each item in lookList
+					+lookItem(item)
+//end look

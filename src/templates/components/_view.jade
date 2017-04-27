@@ -3,7 +3,7 @@ if view ? view : view = []
 //begin view
 +b.view(class= view.classMod ? view.classMod : '')
 	+e.container.container
-		+e.slider.owl-carousel
+		+e.slider.js-view-slider.owl-carousel
 			mixin viewItem(item)
 				+e.item
 					+e.item-img(style='background-image: url(img/content/view-#{item.img}.jpg)')

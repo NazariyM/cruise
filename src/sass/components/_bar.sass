@@ -1,0 +1,47 @@
+.bar
+	&__row
+		padding: 65px 0 35px
+		+clr
+	&__slider
+		float: left
+		width: percentage(622 / 1256)
+		&:not(:last-child)
+			margin-right: 10px
+		.owl-dots
+			position: absolute
+			right: 38px
+			bottom: 21px
+			z-index: 2
+			+clr
+		&-dot
+			float: left
+			width: 8px
+			height: 8px
+			border-radius: 50%
+			background: #f4f4f4
+			transition: background .3s ease-in-out
+			&:not(:last-child)
+				margin-right: 5px
+			&.active
+				background: #1095ff
+		&-item
+			position: relative
+			padding-top: 65.27%
+		&-img
+			+coverdiv
+			+cover
+		&-text
+			position: absolute
+			left: 25px
+			right: 150px
+			bottom: 20px
+			z-index: 2
+			+f('cb', 26)
+			color: $white
+		&-descr
+			font-size: 18px
+			+f('cr')
+	&__text
+		font-size: 18px
+		p:not(:last-child)
+			margin-bottom:  20px

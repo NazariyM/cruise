@@ -1,0 +1,73 @@
+if bar ? bar : bar = []
+
+//begin bar
++b.SECTION.bar(class= barClass ? barClass : '')
+	+b.sect-title._has-link
+		+e.container.container
+			+e.H2.text.title-md Бары
+			+e.A.link.link-decor(href='#!')
+				+png('binocular')
+				+e.SPAN Смотреть барную карту
+	+e.container.container
+		+e.row
+			+e.slider.js-bar-slider.owl-carousel
+				-
+					var barSliderList = [{
+					title: '1001 ночь',
+					descr: '(Корма средней палубы)',
+					img: '1'
+					},{
+					title: 'Диско-бар',
+					descr: '(Корма шлюпочной палубы)',
+					img: '3'
+					},{
+					title: 'Диско-бар',
+					descr: '(Корма шлюпочной палубы)',
+					img: '4'
+					},{
+					title: 'Диско-бар',
+					descr: '(Корма шлюпочной палубы)',
+					img: '2'
+					},{
+					title: 'Диско-бар',
+					descr: '(Корма шлюпочной палубы)',
+					img: '3'
+					}];
+				mixin barSliderItem(item)
+					+e.slider-item
+						+e.slider-img(style='background-image: url(img/content/bar-#{item.img}.jpg)')
+						+e.P.slider-text= item.title
+							= ' '
+							+e.SPAN.slider-descr= item.descr
+				each item in barSliderList
+					+barSliderItem(item)
+			+e.slider.js-bar-slider.owl-carousel
+				-
+					var barSliderList = [{
+					title: 'Диско-бар',
+					descr: '(Корма шлюпочной палубы)',
+					img: '2'
+					},{
+					title: '1001 ночь',
+					descr: '(Корма средней палубы)',
+					img: '4'
+					},{
+					title: 'Диско-бар',
+					descr: '(Корма шлюпочной палубы)',
+					img: '3'
+					},{
+					title: 'Диско-бар',
+					descr: '(Корма шлюпочной палубы)',
+					img: '1'
+					},{
+					title: 'Диско-бар',
+					descr: '(Корма шлюпочной палубы)',
+					img: '4'
+					}];
+				each item in barSliderList
+					+barSliderItem(item)
+
+		+e.text
+			+e.P Бары на теплоходе работают до последнего посетителя и радуют широким ассортиментом прохладительных и спиртных напитков, выбором коктейлей, разными сортами чая, кофе, десертами и мороженым, а также снеками. В барах можно заказать горячие блюда. Для удобства туристов предусмотрена возможность заказа продукции бара в каюту.
+			+e.P Для тех, кто привых просыпаться рано, мы предлагаем утренний чай или кофе за 1 час до завтрака. Также на каждой палубе теплохода установлены кулеры с холодной и горячей водой.
+//end bar

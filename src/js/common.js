@@ -1,7 +1,7 @@
 $(function () {
 
 	function initView () {
-		$('.owl-carousel').owlCarousel({
+		$('.js-view-slider').owlCarousel({
 			items: 4,
 			dots: false,
 			nav: true,
@@ -17,5 +17,12 @@ $(function () {
 	}
 
 	initView();
+
+	$('.js-bar-slider').owlCarousel({
+		items: 1,
+		dots: true,
+		smartSpeed: '600',
+		dotClass: 'bar__slider-dot'
+	});
 
 });

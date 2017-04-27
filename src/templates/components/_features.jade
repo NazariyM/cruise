@@ -1,0 +1,18 @@
+if features ? features : features = []
+
+//begin features
++b.features(class= featuresClass ? featuresClass : '')
+	+e.container.container
+		+e.row
+			mixin featuresItem(item)
+				+e.item
+					+e.item-pic(class='_' + item.picMod)
+					+e.P.item-descr
+							if item.descrTopBold
+								+e.STRONG= item.descrTopBold
+							+e.SPAN= item.descr
+							if item.descrBottomBold
+								+e.STRONG= item.descrBottomBold
+			each item in featuresList
+				+featuresItem(item)
+//end features

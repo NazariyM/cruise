@@ -14,65 +14,69 @@ block content
 		}
 	include components/_contact
 
-	//- rest section
-	-
-		var rest = {
-		classMod: '_default',
-		title: 'Ваш комфортный отдых - Наша забота'
-		}
-		var restRow = [{
-		itemDescr: 'Полная модернизация теплохода произведена',
-		itemDescrBold: 'в 2006 году',
-		picMod: '1'
-		},
-		{
-		itemDescr: 'Санузел, кондиционер, холодильник',
-		itemDescrBold: 'в каждом номере',
-		picMod: '2'
-		},
-		{
-		itemDescr: 'Капитальный ремонт был произведён',
-		itemDescrBold: 'в 2013 году',
-		picMod: '3'
-		},
-		{
-		itemDescr: 'Теплоход спроектирован и собран',
-		itemDescrBold: 'в Германии',
-		picMod: '4'
-		}];
+	//begin rest
+	+b.SECTION.rest._default
+		+b.sect-title
+			+e.container.container
+				+b.H2.title-md Ваш комфортный отдых - Наша забота
+		-
+			var featuresClass = '_default'
+			var featuresList = [{
+			descr: 'Полная модернизация теплохода произведена',
+			descrBottomBold: 'в 2006 году',
+			picMod: 'modern'
+			},
+			{
+			descr: 'Санузел, кондиционер, холодильник',
+			descrBottomBold: 'в каждом номере',
+			picMod: 'refrigerator'
+			},
+			{
+			descr: 'Капитальный ремонт был произведён',
+			descrBottomBold: 'в 2013 году',
+			picMod: 'repair'
+			},
+			{
+			descr: 'Теплоход спроектирован и собран',
+			descrBottomBold: 'в Германии',
+			picMod: 'ship'
+			}];
 
-		var lookList= [{
-		colMod: 'sm',
-		pic: '1',
-		title: 'Виды кают',
-		descr: 'Просто текст без смысла'
-		},
-		{
-		colMod: 'md',
-		pic: '2',
-		title: 'Ресторан',
-		descr: 'Просто текст без смысла, в два рядка'
-		},
-		{
-		colMod: 'sm',
-		pic: '3',
-		title: 'Бар',
-		descr: 'Просто текст без смысла, в два рядка'
-		},
-		{
-		colMod: 'md',
-		pic: '4',
-		title: 'Развлекательная программа',
-		descr: 'Просто текст без смысла'
-		},
-		{
-		colMod: 'md',
-		pic: '5',
-		title: 'Экскурсионная программа',
-		descr: 'Просто текст без смысла'
-		}]
-		var restClass = '_default'
-	include components/_rest
+			var lookClass= '_default'
+			var lookList= [{
+			colMod: 'sm',
+			pic: '1',
+			title: 'Виды кают',
+			descr: 'Просто текст без смысла'
+			},
+			{
+			colMod: 'md',
+			pic: '2',
+			title: 'Ресторан',
+			descr: 'Просто текст без смысла, в два рядка'
+			},
+			{
+			colMod: 'sm',
+			pic: '3',
+			title: 'Бар',
+			descr: 'Просто текст без смысла, в два рядка'
+			},
+			{
+			colMod: 'md',
+			pic: '4',
+			title: 'Развлекательная программа',
+			descr: 'Просто текст без смысла'
+			},
+			{
+			colMod: 'md',
+			pic: '5',
+			title: 'Экскурсионная программа',
+			descr: 'Просто текст без смысла'
+			}]
+
+		include components/_features
+		include components/_look
+		//end rest
 
 	//- cabin-types section
 	-
@@ -135,3 +139,66 @@ block content
 		}
 		var viewSlider = [{ img: '1'},{ img: '2'},{img: '3'},{img: '4'},{img: 'big'},{img: '1'}]
 	include components/_view
+
+
+	//begin restaurant
+	+b.SECTION.restaurant._default
+		+b.sect-title._has-link
+			+e.container.container
+				+e.H2.text.title-md Ресторан
+				+e.A.link.link-decor(href='#!')
+					+png('binocular')
+					+e.SPAN Смотреть примерное меню
+		+e.container.container
+			+e.row
+				-
+					var restaurantRow = [{
+					img: 'director',
+					name: 'Элита Станислава Пономарева',
+					position: 'Директор'
+					},{
+					img: 'chief-cook',
+					name: 'Надежда Михайловна Волчкова',
+					position: 'Шеф-повар'
+					}];
+				mixin restaurantItem(item)
+					+e.person
+						+e.person-pic
+							+e.IMG(src='img/content/#{item.img}.jpg').person-img
+						+e.person-text
+							+e.person-name= item.name
+							+e.person-pos= item.position
+				each item in restaurantRow
+					+restaurantItem(item)
+
+		-
+			var featuresClass = '_restaurant'
+			var featuresList = [{
+			descrTopBold: '3-разовое питание',
+			descr: 'завтрак, обед и ужин в одну смену.',
+			picMod: 'restaurant'
+			},
+			{
+			descrTopBold: 'Заказное меню',
+			descr: 'С возможностью выбора блюд. На выбор предлагаются салаты, супы (на обед), основные блюда и десерты. Заказная система действует, начиная со 2-го дня.',
+			picMod: 'menu'
+			},
+			{
+			descrTopBold: 'Для отдыхающих, к оторые придерживаются диеты или предпочитают пишу “халяль”,',
+			descr: 'наши повара приготовятспециальные блюда. Для самых маленьких путешественников можно заказать блюда из “Детского меню”.',
+			picMod: 'diet'
+			},
+			{
+			descrTopBold: 'Дни национальной кухни',
+			descr: 'русской, украинской, грузинской, итальянской, мексиканской, индийской и т.д.',
+			picMod: 'national'
+			},
+			{
+			descrTopBold: 'Детское меню',
+			descr: 'специально разработано. Для маленьких туристов (до 5 лет), путешествующих бесплатно (без предоставления отдельно спального места и питания).',
+			picMod: 'ice-cream'
+			}];
+		include components/_features
+	//end restaurant
+
+	include components/_bar
