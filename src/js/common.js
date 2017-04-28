@@ -39,14 +39,9 @@ $(function () {
 		infinite: true,
 		dots: false,
 		arrows: true,
-		prevArrow: '<button type="button" class="testimonials__slider-arr testimonials__slider-arr_prev"><svg class="view__slider-icon icon-arr-sld_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld_l"></use></svg></button>',
-		nextArrow: '<button type="button" class="testimonials__slider-arr testimonials__slider-arr_next"><svg class="view__slider-icon icon-arr-sld_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld_r"></use></svg></button>'
+		prevArrow: '<button type="button" class="testimonials__slider-arr testimonials__slider-arr_prev"><svg class="testimonials__slider-icon icon-arr-sld_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld_l"></use></svg></button>',
+		nextArrow: '<button type="button" class="testimonials__slider-arr testimonials__slider-arr_next"><svg class="testimonials__slider-icon icon-arr-sld_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld_r"></use></svg></button>'
 	});
-
-	// var leftSlide = $('.js-testimonials-slider').find('.testimonials__slider-item').eq(1);
-	// var rightSlide = $('.js-testimonials-slider').find('.testimonials__slider-item').eq(3);
-	//
-	// leftSlide.css('display','none');
 
 	//excursion tabs
 	function initExcursionToggling () {

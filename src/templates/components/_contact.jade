@@ -17,8 +17,9 @@ if contact ? contact : contact = []
 				if contact.formTimeField
 					+e.form-field
 						+png('time')
-						+icon('icon-timepick')
 						+e.INPUT(type='text' name='' placeholder='Время звонка').form-input._timepick.input
+						+e.BUTTON.time-btn(type='button')
+							+icon('icon-timepick')
 				+e.form-field
 					+e.BUTTON(type='submit').form-btn.btn-transparent Позвоните мне
 //end contact

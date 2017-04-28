@@ -1128,6 +1128,188 @@ html {
   fill: #010002;
 }
 
+.icon-arr_d {
+  width: 21px;
+  height: 21px;
+  background-image: url("../img/sprite.png");
+  background-position: -349px -327px;
+}
+
+.icon-binocular {
+  width: 21px;
+  height: 19px;
+  background-image: url("../img/sprite.png");
+  background-position: -380px -327px;
+}
+
+.icon-call {
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/sprite.png");
+  background-position: -411px -327px;
+}
+
+.icon-conference {
+  width: 104px;
+  height: 98px;
+  background-image: url("../img/sprite.png");
+  background-position: -122px -113px;
+}
+
+.icon-diet {
+  width: 104px;
+  height: 95px;
+  background-image: url("../img/sprite.png");
+  background-position: -350px 0px;
+}
+
+.icon-disco {
+  width: 104px;
+  height: 103px;
+  background-image: url("../img/sprite.png");
+  background-position: -122px 0px;
+}
+
+.icon-fan {
+  width: 13px;
+  height: 14px;
+  background-image: url("../img/sprite.png");
+  background-position: -276px -383px;
+}
+
+.icon-horse {
+  width: 104px;
+  height: 96px;
+  background-image: url("../img/sprite.png");
+  background-position: 0px -221px;
+}
+
+.icon-ice-cream {
+  width: 104px;
+  height: 95px;
+  background-image: url("../img/sprite.png");
+  background-position: -228px -221px;
+}
+
+.icon-masterclass {
+  width: 104px;
+  height: 103px;
+  background-image: url("../img/sprite.png");
+  background-position: 0px -108px;
+}
+
+.icon-menu {
+  width: 104px;
+  height: 97px;
+  background-image: url("../img/sprite.png");
+  background-position: -236px 0px;
+}
+
+.icon-modern {
+  width: 104px;
+  height: 91px;
+  background-image: url("../img/sprite.png");
+  background-position: -350px -210px;
+}
+
+.icon-national {
+  width: 104px;
+  height: 96px;
+  background-image: url("../img/sprite.png");
+  background-position: -236px -107px;
+}
+
+.icon-nutrition {
+  width: 104px;
+  height: 96px;
+  background-image: url("../img/sprite.png");
+  background-position: -114px -221px;
+}
+
+.icon-phone {
+  width: 41px;
+  height: 41px;
+  background-image: url("../img/sprite.png");
+  background-position: -298px -327px;
+}
+
+.icon-quote {
+  width: 60px;
+  height: 46px;
+  background-image: url("../img/sprite.png");
+  background-position: -228px -327px;
+}
+
+.icon-refr {
+  width: 9px;
+  height: 15px;
+  background-image: url("../img/sprite.png");
+  background-position: 0px -428px;
+}
+
+.icon-refrigerator {
+  width: 104px;
+  height: 95px;
+  background-image: url("../img/sprite.png");
+  background-position: -350px -105px;
+}
+
+.icon-repair {
+  width: 104px;
+  height: 91px;
+  background-image: url("../img/sprite.png");
+  background-position: 0px -327px;
+}
+
+.icon-restaurant {
+  width: 112px;
+  height: 98px;
+  background-image: url("../img/sprite.png");
+  background-position: 0px 0px;
+}
+
+.icon-ship {
+  width: 104px;
+  height: 79px;
+  background-image: url("../img/sprite.png");
+  background-position: -114px -327px;
+}
+
+.icon-sofa {
+  width: 20px;
+  height: 10px;
+  background-image: url("../img/sprite.png");
+  background-position: -349px -358px;
+}
+
+.icon-time {
+  width: 15px;
+  height: 15px;
+  background-image: url("../img/sprite.png");
+  background-position: -437px -327px;
+}
+
+.icon-toilet {
+  width: 14px;
+  height: 15px;
+  background-image: url("../img/sprite.png");
+  background-position: -252px -383px;
+}
+
+.icon-tv {
+  width: 13px;
+  height: 12px;
+  background-image: url("../img/sprite.png");
+  background-position: -299px -383px;
+}
+
+.icon-user {
+  width: 14px;
+  height: 16px;
+  background-image: url("../img/sprite.png");
+  background-position: -228px -383px;
+}
+
 /*  COMPONENTS */
 body {
   font-family: "Circe-Regular", Arial, sans-serif;
@@ -1448,7 +1630,7 @@ strong {
 }
 
 .menu__list-link:hover {
-  color: #0074d1;
+  color: #22273b;
 }
 
 /* call-me
@@ -1696,19 +1878,23 @@ strong {
   left: 11px;
 }
 
-.contact__form-field .icon-timepick {
-  position: absolute;
-  top: 12px;
-  right: 10px;
-  font-size: 16px;
-}
-
 .contact__form-input {
   padding: 8px 10px 8px 38px;
 }
 
 .contact__form-input_timepick {
   padding: 8px 28px 8px 38px;
+}
+
+.contact__time-btn {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  background: none;
+}
+
+.contact__time-btn .icon-timepick {
+  font-size: 16px;
 }
 
 .contact__form-btn {
@@ -2681,11 +2867,11 @@ strong {
 }
 
 .testimonials {
-  background-color: grey;
+  background-color: #f4f4f4;
 }
 
 .testimonials_default {
-  padding: 100px 0;
+  padding: 85px 0;
 }
 
 .testimonials__title {
@@ -2695,7 +2881,6 @@ strong {
 
 .testimonials__slider {
   display: none;
-  padding: 50px 0 60px;
 }
 
 .testimonials__slider.slick-initialized {
@@ -2703,23 +2888,43 @@ strong {
 }
 
 .testimonials__slider-item {
-  padding: 65px 100px;
+  padding: 60px;
   text-align: center;
   background: #fff;
 }
 
 .testimonials__slider-text {
   margin-bottom: 50px;
-  font-size: 18px;
-  line-height: 1.44444;
+  font-size: 24px;
+  line-height: 1.3;
 }
 
 .testimonials__slider-arr {
   position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  top: 42%;
+  z-index: 3;
+  box-shadow: 0 3px 65px rgba(0, 0, 0, 0.08);
+}
+
+.testimonials__slider-arr_next {
+  right: 21.1%;
+}
+
+.testimonials__slider-arr_prev {
+  left: 21.1%;
+}
+
+.testimonials__slider-icon {
+  font-size: 18px;
+  fill: #000;
+  box-shadow: 0 3px 65px rgba(0, 0, 0, 0.08);
 }
 
 .testimonials__slider-person {
-  margin-top: 20px;
+  margin-top: 8px;
   font-size: 20px;
 }
 
@@ -2732,12 +2937,13 @@ strong {
   display: flex;
   -ms-flex-align: center;
   align-items: center;
+  padding: 46px 0 42px;
 }
 
 .testimonials__slider-item {
   transition: all 0.4s ease-in-out;
   cursor: pointer;
-  transform: scale(0.5) translate3d(50%, 0, 0);
+  transform: scale(0.7) translate3d(50%, 0, 0);
 }
 
 .testimonials__slider-item.slick-center {
@@ -2746,8 +2952,12 @@ strong {
   cursor: default;
 }
 
+.testimonials__slider-item.slick-center {
+  z-index: 2;
+}
+
 .testimonials__slider-item.slick-center + .testimonials__slider-item {
-  transform: scale(0.5) translate3d(-50%, 0, 0);
+  transform: scale(0.7) translate3d(-50%, 0, 0);
 }
 
 .testimonials__more {

@@ -9,16 +9,17 @@ if testimonials ? testimonials : testimonials = []
 		+e.slider.js-testimonials-slider
 			mixin testimonialsItem(item)
 				+e.slider-item
-					+e.BLOCKQUOTE.slider-text= item.text
-					+b.rating.testimonials__rating(data-rate='4')
-						+icon('icon-star', 'rating__star')
-						+icon('icon-star', 'rating__star')
-						+icon('icon-star', 'rating__star')
-						+icon('icon-star', 'rating__star')
-						+icon('icon-star', 'rating__star')
-					+e.slider-person Евгения,
-						= ' '
-						+e.SPAN 7 декабря
+					+e.slider-in
+						+e.BLOCKQUOTE.slider-text= item.text
+						+b.rating.testimonials__rating(data-rate='4')
+							+icon('icon-star', 'rating__star')
+							+icon('icon-star', 'rating__star')
+							+icon('icon-star', 'rating__star')
+							+icon('icon-star', 'rating__star')
+							+icon('icon-star', 'rating__star')
+						+e.slider-person Евгения,
+							= ' '
+							+e.SPAN 7 декабря
 			each item in testimonialsSlider
 				+testimonialsItem(item)
 		+e.more
