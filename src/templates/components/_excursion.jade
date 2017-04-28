@@ -1,0 +1,52 @@
+if excursion ? excursion : excursion = []
+
+//begin excursion
++b.excursion(class= excursion.classMod ? excursion.classMod : '')
+	+b.sect-title
+		+e.container.container
+			+b.H2.title-md= excursion.title
+	+e.map-wrap
+		+e.map.js-excursion-map
+		+e.map-cities
+			+e.map-in
+				-
+					var mapList = [{
+					text: 'Нижнний Новгород'
+					},{
+					text: 'Астрахань'
+					},{
+					text: 'Волгоград'
+					},{
+					text: 'Винновка'
+					},{
+					text: 'Москва'
+					},{
+					text: 'Кострома'
+					},{
+					text: 'Ярославль'
+					},{
+					text: 'Чебоксары'
+					},{
+					text: 'Казань'
+					},{
+					text: 'Углич'
+					},{
+					text: 'Городец'
+					},{
+					text: 'Нижнекамск'
+					},{
+					text: 'Самара'
+					},{
+					text: 'Балаково'
+					},{
+					text: 'Саратов'
+					}];
+				+e.UL.map-list
+					mixin mapListItem(item)
+						+e.LI
+							+e.BUTTON(type='button')= item.text
+					each item in mapList
+						+mapListItem(item)
+
+
+//end excursion

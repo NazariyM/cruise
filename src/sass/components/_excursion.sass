@@ -1,0 +1,24 @@
+.excursion
+	&_default
+		.sect-title
+			background-color: transparent
+	&__map-wrap
+	&__map-cities
+		background-color: rgba(#fff, .6)
+	&__map-in
+		max-width: 1086px
+		margin: 0 auto
+		padding: 0 15px
+	&__map-list
+		font-size: 0
+		li
+			display: inline-block
+			vertical-align: top
+			width: 20%
+			margin-bottom: 15px
+			button
+				background: none
+				+f('cb', 18)
+				+trs
+				&:hover
+					color: $blue

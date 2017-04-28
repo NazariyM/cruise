@@ -6,22 +6,27 @@
 	&__person
 		float: left
 		width: 50%
-		&-pic
+		&-pic-wrap
 			position: relative
 			display: inline-block
 			vertical-align: middle
 			width: percentage(246 / 628)
+			&::after
+				position: absolute
+				top: -5%
+				right: -45%
+				width: 58.1%
+				height: 43.9%
+				z-index: 1
+				content: ''
+				background: url(../img/bg/img-decor.png) no-repeat 50% 50%/cover
+		&-pic
+			position: relative
+			z-index: 2
 			overflow: hidden
 			border: 6px solid $white
 			border-radius: 50%
 			background: $white
-			&::after
-				position: absolute
-				top: 0
-				right: -50px
-				z-index: 1
-				content: ''
-				+s('img-decor')
 		&-img
 			width: 100%
 			height: 100%

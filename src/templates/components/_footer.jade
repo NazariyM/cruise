@@ -1,0 +1,20 @@
+//begin footer
++b.FOOTER.footer
+	+e.container.container
+		+e.col
+			+e.P.copy Copyright © 2017 ООО ТК «РосВояж» – круизы по-новому!
+		+e.col
+			+b.socials.footer__socials
+				-
+					var socialList = [{pic: 'fb'}, {pic: 'tw'}, {pic: 'insta'}, {pic: 'gp'}];
+				mixin socialLink(item)
+					+e.A(href='#!').link
+						+icon('icon-' + item.pic)
+				each item in socialList
+					+socialLink(item)
+		+e.col.footer__contact
+			+e.A(href='#!').contact-btn.btn Напишите нам
+			+e.P.contact-dev Сделано руками
+				=	' '
+				+e.A(href='#!') Актиком
+//end footer

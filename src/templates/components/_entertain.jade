@@ -1,0 +1,29 @@
+if entertain ? entertain : entertain = []
+
+//begin entertain
++b.entertain(class= entertain.classMod ? entertain.classMod : '')
+	+b.sect-title
+		+e.container.container
+			+e.H2.text.title-md= entertain.title
+	+e.container.container
+		+e.in
+			mixin entertainPerson(person)
+				+e.person
+					+e.person-pic
+						+e.IMG(src='img/content/#{person.img}.jpg').person-img
+					+e.person-text
+						+e.person-in
+							+e.person-name= person.name
+							+e.person-pos= person.position
+						+e.P.person-descr= person.descrFirst
+						+e.P.person-descr= person.descrSecond
+			each person in personList
+				+entertainPerson(person)
+
+			include _list
+
+			+e.link
+				+b.A(href='#!' download).link-decor
+					+png('arr_d')
+					+e.SPAN Скачать программу тематических круизов 2017
+//end entertain

@@ -1,0 +1,10 @@
+if list ? list : list = []
+	+b.list(class= list.listClassMod ? list.listClassMod : '')
+		+e.in
+			+e.title= list.listTitle
+			+e.UL
+				mixin listItem(listItem)
+					+e.LI
+						+e.SPAN= listItem.text
+				each listItem in listText
+					+listItem(listItem)

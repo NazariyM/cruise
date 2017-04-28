@@ -16,10 +16,10 @@
 						+e.A.list-link(href='#!') Новости
 					+e.LI.list-item
 						+e.A.list-link(href='#!') Контакты
-
 			+b.location.header__location
 				+e.UL
 					+e.LI Самара
+
 	+e.screen
 		+e.screen-picture(style='background-image: url(img/bg/screen_bg.jpg)')
 		+e.container.container
@@ -35,7 +35,8 @@
 						+e.A.list-link(href='#!') Международные туры
 			+b.call-me.header__call-me
 				+e.A(href='tel:88463327555').number 8 (846) 332-75-55
-				+e.BUTTON(type='button').btn Перезвоните мне
+				+e.BUTTON(type='button').btn.link-decor
+					+e.SPAN Перезвоните мне
 			+e.A(href='#!').pick-btn.btn Подобрать тур
 		+e.screen-title
 			+e.DIV Европейский сервис

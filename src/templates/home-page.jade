@@ -4,15 +4,24 @@ title: РосВояж
 extends layouts/_layout
 
 block content
-	//- contact section
-	-
-		var contact = {
-		classMod: '_default _bg-1',
-		title: 'Мы можем связаться с вами уже сейчас, и предложить вам тур по вашим предпочтениям',
-		formInClassMod: 'sm',
-		titleCase: '_upper'
-		}
-	include components/_contact
+
+	//begin contact
+	+b.SECTION.contact._default._bg-1
+		+e.container.container
+			+b.H3.title-sm.contact__title._upper МЫ МОЖЕМ СВЯЗАТЬСЯ С ВАМИ УЖЕ СЕЙЧАС,
+				br
+				| И ПРЕДЛОЖИТЬ ВАМ ТУР ПО ВАШИМ ПРЕДПОЧТЕНИЯМ
+			+e.FORM
+				+e.form-in._sm
+					+e.form-field
+						+png('user')
+						+e.INPUT(type='text' name='' placeholder='Имя').form-input.input
+					+e.form-field
+						+png('call')
+						+e.INPUT(type='text' name='' placeholder='Телефон').form-input.input
+					+e.form-field
+						+e.BUTTON(type='submit').form-btn.btn-transparent Позвоните мне
+	//end contact
 
 	//begin rest
 	+b.SECTION.rest._default
@@ -20,7 +29,7 @@ block content
 			+e.container.container
 				+b.H2.title-md Ваш комфортный отдых - Наша забота
 		-
-			var featuresClass = '_default'
+			var featuresClass = '_rest'
 			var featuresList = [{
 			descr: 'Полная модернизация теплохода произведена',
 			descrBottomBold: 'в 2006 году',
@@ -42,7 +51,6 @@ block content
 			picMod: 'ship'
 			}];
 
-			var lookClass= '_default'
 			var lookList= [{
 			colMod: 'sm',
 			pic: '1',
@@ -163,8 +171,9 @@ block content
 					}];
 				mixin restaurantItem(item)
 					+e.person
-						+e.person-pic
-							+e.IMG(src='img/content/#{item.img}.jpg').person-img
+						+e.person-pic-wrap
+							+e.person-pic
+								+e.IMG(src='img/content/#{item.img}.jpg').person-img
 						+e.person-text
 							+e.person-name= item.name
 							+e.person-pos= item.position
@@ -202,3 +211,144 @@ block content
 	//end restaurant
 
 	include components/_bar
+
+	//- contact section
+	-
+		var contact = {
+		classMod: '_default _bg-3',
+		title: 'Есть вопрос по меню? Поможем!',
+		descr: 'Оставьте заявку и менеджер свяжется с вами, чтобы ответить на все ваши вопросы',
+		formTimeField: true
+		}
+	include components/_contact
+
+	//- entertain section
+	-
+		var entertain = {
+		classMod: '_default',
+		title: 'Развлекательная программа',
+		};
+		var personList = [{
+		img: 'art-director',
+		name: 'Екатерина Орлова',
+		position: 'Арт-директор',
+		descrFirst: '“Арт бригада на теплоходе “Алексей Толстой” - это не просто ведущий, организатор и певцы, музыканты и танцоры - это дружная, энергичная, любящая свое дело команда!”',
+		descrSecond: 'Мы создаём и отбираем лучшие номера и предлагаем лишь то, что актуально для определенного рейса.'
+		}];
+
+		var list = {
+		listClassMod: '_entertain',
+		listTitle: 'Что мы делаем:'
+		};
+		var listText = [{
+		text: 'Бесконечное количество сценариев, конкурсов и игр для взрослых и детей;'
+		},{
+		text: 'Развлекательные шоу-программы разнообразных форматов;'
+		},{
+		text: 'Только качественный и корректный юмор в рамках выбранной концепции;'
+		},{
+		text: 'Детский клуб “Буратино” с профессиональными аниматорами для маленьких туристов;'
+		},{
+		text: 'Зажигательная дискотека для взрослых и мини-диско для детей;'
+		},{
+		text: 'Мастер-классы от творчесой мастерской “Бешеная пчёлка”.'
+		}]
+	include components/_entertain
+
+	//begin master
+	+b.SECTION.master._default
+		+b.sect-title
+			+e.container.container
+				+e.H2.text.title-md Бесплатные мастер-классы
+		+e.container.container
+			-
+				var lookClass= '_master'
+				var lookList= [{
+				colMod: 'sm',
+				pic: '6',
+				title: 'Цветы востока',
+				descr: 'Просто текст без смысла'
+				},
+				{
+				colMod: 'md',
+				pic: '7',
+				title: 'Подставки под кружки',
+				descr: 'Просто текст без смысла, в два рядка'
+				},
+				{
+				colMod: 'sm',
+				pic: '8',
+				title: 'Мыльная опера',
+				descr: 'Просто текст без смысла, в два рядка'
+				},
+				{
+				colMod: 'md',
+				pic: '9',
+				title: 'Цветное стекло',
+				descr: 'Просто текст без смысла'
+				},
+				{
+				colMod: 'sm',
+				pic: '10',
+				title: 'Кукла Тильда',
+				descr: 'Просто текст без смысла'
+				},
+				{
+				colMod: 'sm',
+				pic: '11',
+				title: 'Неваляшка',
+				descr: 'Просто текст без смысла'
+				}]
+
+			include components/_look
+
+			+e.P Не забудем мы и наших юных туристов. К их распоряжению детская комната. Они исследуют загадочные места, пройдут сложные испытания для того, чтобы найти клад. Смогут проверить свои возможности и проявить таланты. А так же, ребята, научатся создавать чудеса своими руками!
+		// end master
+
+	//- contact section
+	-
+		var contact = {
+		classMod: '_default _bg-4',
+		title: 'Есть вопрос по развлечениям? Поможем!',
+		descr: 'Оставьте заявку и менеджер свяжется с вами, чтобы ответить на все ваши вопросы',
+		formTimeField: true
+		}
+	include components/_contact
+
+	-
+		var excursion = {
+		classMod: '_default',
+		title: 'Экскурсионные направления'
+		}
+	include components/_excursion
+
+	//- contact section
+	-
+		var contact = {
+		classMod: '_default _bg-5',
+		title: 'Есть вопрос по экскурсионным турам? Поможем!',
+		descr: 'Оставьте заявку и менеджер свяжется с вами, чтобы подобрать вам подходящий экскурсионный тур',
+		formTimeField: true
+		}
+	include components/_contact
+
+	//- testimonials
+	-
+		var testimonialsClass = '_default';
+		testimonialsSlider = [{
+		text: '“Отличное расположение, в центре поселка - везде близко, пляж рядом... Отзывчивый персонал, говорят на английском. Номер большой”'
+		},{
+		text: '“ Сегодня прилетели из Сочи. Отдыхали в горном курорте. Отдохнули отлично!!!! Все было организовано четко и слажено: перелет, трансфер, заселение в отель. Обязательно воспользуюсь услугами снова... ”'
+		},{
+		text: '"Отличное расположение, в центре поселка - везде близко, пляж рядом... Отзывчивый персонал, говорят на английском. Номер большой"'
+		},{
+		text: '“Отличное расположение, в центре поселка - везде близко, пляж рядом... Отзывчивый персонал, говорят на английском. Номер большой”'
+		},{
+		text: '“ Сегодня прилетели из Сочи. Отдыхали в горном курорте. Отдохнули отлично!!!! Все было организовано четко и слажено: перелет, трансфер, заселение в отель. Обязательно воспользуюсь услугами снова... ”'
+		}];
+	include components/_testimonials
+
+	//- about
+
+	-var aboutClass = '_default';
+	include components/_about

@@ -1,7 +1,7 @@
 body
-	+f('cr',15)
-	line-height: 1.2
+	+f('cr',18)
 	+smooth-font
+	line-height: 1.4
 	color: $grey
 
 h1, h2, h3, h4, h5, h6
@@ -13,6 +13,9 @@ a
 	
 img
 	display: block
+	
+strong
+	+f('cb')
 	
 .out
 	overflow: hidden
@@ -35,15 +38,21 @@ img
 		background: darken($blue, 8)
 		
 .btn-transparent
+	display: inline-block
 	padding: 6px 10px 6px 10px
 	background-color: transparent
 	+f('cb', 16)
 	color: $white
 	border: 2px solid $white
 	border-radius: 3px
+	&_border
+		color: #000
+		border-radius: 3px
+		border: 2px solid $blue
 	
 .title-sm
-	+f('cb', 24, 36)
+	+f('cb', 32)
+	line-height: 1.4
 	color: $white
 	
 .title-md
@@ -53,7 +62,7 @@ img
 	
 .sect-title
 	position: relative
-	padding: 15px
+	padding: 15px 15px 8px
 	border-bottom: 1px solid rgba(#000, .1)
 	text-align: center
 	&::after
@@ -74,9 +83,10 @@ img
 	&_has-link &__text
 		max-width: 700px
 		margin: 0 auto
+		
 .link-decor
 	display: inline-block
-	padding-bottom: 1px
+	vertical-align: middle
 	font-size: 18px
 	color: $grey
 	&:hover
@@ -86,15 +96,16 @@ img
 	span
 		display: inline-block
 		vertical-align: middle
-		margin-left: 15px
+		padding-bottom: 2px
 		background-color: transparent
 		background-image: linear-gradient(to right, rgba($grey, .6) 50%, transparent 50%)
 		background-position: 100% 100%
 		background-size: 9px 2px
 		background-repeat: repeat-x
-	&_in-title
-		display: inline-block
-		vertical-align: middle
+	&_has-icon
+		span
+			margin-left: 10px
+	
 	
 .input
 	width: 100%

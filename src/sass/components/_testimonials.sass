@@ -1,0 +1,65 @@
+.testimonials
+	background-color: grey
+	//background-color: #f4f4f4
+	&_default
+	&__container
+		max-width: 1220px
+	&__title
+		font-size: 40px
+	&__slider
+		padding: 50px 0 60px
+		&-item
+			padding: 65px 40px
+			text-align: center
+			background: $white
+		&-text
+			margin-bottom: 50px
+			font-size: 24px
+			line-height: (30/24)
+		&-rating
+		&-person
+			margin-top: 20px
+			font-size: 20px
+			span
+				color: #acacac
+		.owl-stage
+			display: flex
+			align-items: center
+		.owl-item
+			//transform: scale(.5) translate3d(50%, 0, 0)
+			transition: all 0.75s ease-in-out
+			//transform-origin: center center
+			cursor: default
+		.owl-item.active
+			//transform: scale(.7)
+		.owl-item.center
+			//transform: scale(1) translate3d(0, 0, 0)
+			box-shadow: 0 3px 65px rgba(0, 0, 0, 0.08)
+			
+				
+/* rating
+	----------------------------------- */
+.rating
+	display: inline-block
+	font-size: 0
+	&[data-rate="1"]
+		.icon-star:nth-child(1) ~ .icon-star
+			fill: #a9a9a9
+	&[data-rate="2"]
+		.icon-star:nth-child(2) ~ .icon-star
+			fill: #a9a9a9
+	&[data-rate="3"]
+		.icon-star:nth-child(3) ~ .icon-star
+			fill: #a9a9a9
+	&[data-rate="4"]
+		.icon-star:nth-child(4) ~ .icon-star
+			fill: #a9a9a9
+	&[data-rate="5"]
+		.icon-star:nth-child(5) ~ .icon-star
+			fill: #a9a9a9
+	&__star
+		display: inline-block
+		font-size: 15px
+		fill: #ffbe05
+		& + &
+			margin-left: 5px

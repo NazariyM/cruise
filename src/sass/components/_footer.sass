@@ -1,0 +1,56 @@
+.footer
+	padding: 60px 0 40px
+	color: #6f6f6f
+	&__container
+		font-size: 0
+		+justify
+	&__col
+		display: inline-block
+		vertical-align: middle
+		text-align: left
+		line-height: 1.2
+		&:nth-child(1)
+			width: percentage(430 / 1256)
+		&:nth-child(2)
+			width: percentage(160 / 1256)
+		&:nth-child(3)
+			width: 35%
+	&__copy
+		font-size: 16px
+	&__socials
+		text-align-last: center
+	&__contact-btn
+		display: inline-block
+		vertical-align: middle
+	&__contact-dev
+		display: inline-block
+		vertical-align: middle
+		margin-left: 55px
+		font-size: 16px
+		a
+			color: #2d2d2d
+			text-decoration: underline
+			&:hover
+				text-decoration: none
+		
+/* socials
+	----------------------------------- */
+.socials
+	font-size: 0
+	&__link
+		display: inline-block
+		vertical-align: middle
+		font-size: 16px
+		& + &
+			margin-left: 15px
+		svg
+			display: inline-block
+			vertical-align: middle
+			fill: #959595
+			+trs
+			&:hover
+				fill: $blue
+		.icon-tw
+			font-size: 17px
+		.icon-gp
+			font-size: 18px

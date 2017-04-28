@@ -1,0 +1,72 @@
+.entertain
+	background-color: #f4f4f4
+	&_default
+		padding: 0 0 30px
+	&__container
+		+clr
+	&__in
+		float: right
+		width: percentage(1116 / 1256)
+		padding: 30px 0 0
+		&::before
+			float: right
+			margin-left: -25px
+			width: 143px
+			height: 108px
+			z-index: 1
+			content: ''
+			background: url(../img/bg/img-decor.png) no-repeat 50% 50%/cover
+	&__person
+		width: percentage(994 / 1116)
+		margin-bottom: 35px
+		&-in
+			margin-bottom: 25px
+		&-pic
+			display: inline-block
+			vertical-align: top
+			width: percentage(246 / 994)
+			overflow: hidden
+			border-radius: 50%
+			border: 6px solid $white
+			background: $white
+		&-text
+			position: relative
+			display: inline-block
+			vertical-align: top
+			width: percentage(718 / 994)
+			margin-left: 25px
+			padding: 15px 9px 25px 25px
+			background: $white
+			border-radius: 10px
+			border-left: 2px solid #DCDCDC
+			border-bottom: 3px solid #DCDCDC
+			&::before, &::after
+				top: 10%
+				border: solid transparent
+				height: 0
+				width: 0
+				position: absolute
+				pointer-events: none
+				content: ''
+			&::before
+				left: -21px
+				top: 25px
+				border-color: transparent
+				border-right-color: #DCDCDC
+				border-width: 14px 21px 14px 0
+			&::after
+				top: 24px
+				left: -19px
+				border-color: transparent
+				border-right-color: #FFFFFF
+				border-width: 13px 19px 13px 0
+		&-name
+			+f('cb', 20)
+		&-pos
+			font-size: 16px
+		&-descr
+			&:not(:last-child)
+				margin-bottom: 20px
+	&__link
+		text-align: right
+		

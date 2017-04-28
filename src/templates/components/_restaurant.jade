@@ -12,8 +12,9 @@ if restaurant ? restaurant : restaurant = []
 		+e.row
 			mixin restaurantItem(item)
 				+e.person
-					+e.person-pic
-						+e.IMG(src='img/content/#{item.img}.jpg').person-img
+					+e.person-pic-wrap
+						+e.person-pic
+							+e.IMG(src='img/content/#{item.img}.jpg').person-img
 					+e.person-text
 						+e.person-name= item.name
 						+e.person-pos= item.position

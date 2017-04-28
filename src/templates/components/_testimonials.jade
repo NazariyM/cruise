@@ -1,0 +1,26 @@
+if testimonials ? testimonials : testimonials = []
+
+//begin organize
++b.SECTION.testimonials(class= testimonialsClass ? testimonialsClass : '')
+	+e.container.container
+		+e.H2.title Мы организовали отдых уже
+			= ' '
+			+e.STRONG 786 клиентам
+		+e.slider.js-testimonials-slider.owl-carousel
+			mixin testimonialsItem(item)
+				+e.slider-item
+					+e.BLOCKQUOTE.slider-text= item.text
+					+b.rating.testimonials__rating(data-rate='4')
+						+icon('icon-star', 'rating__star')
+						+icon('icon-star', 'rating__star')
+						+icon('icon-star', 'rating__star')
+						+icon('icon-star', 'rating__star')
+						+icon('icon-star', 'rating__star')
+					+e.slider-person Евгения,
+						= ' '
+						+e.SPAN 7 декабря
+			each item in testimonialsSlider
+				+testimonialsItem(item)
+		+e.more
+			+e.A(href='#!').btn.btn-transparent._border Еще отзывы
+//end organize
