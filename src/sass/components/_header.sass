@@ -62,19 +62,44 @@
 /* menu
 	----------------------------------- */
 .menu
+	position: relative
+	&::before
+		content: ''
+		position: absolute
+		left: -250%
+		bottom: -54px
+		z-index: 1
+		width: 700%
+		height: 1px
+		background-color: rgba(#fff, .1)
+		pointer-events: none
 	&__list
 		font-size: 0
 		&-item
+			position: relative
+			padding: 0 12px
 			display: inline-block
 			vertical-align: top
-			& + &
-				margin-left: 25px
+			&:first-child
+				padding-left: 0
+			&:nth-child(3)
+				padding-right: 0
 		&-link
+			position: relative
+			display: block
 			font-size: 18px
 			color: $white
-			+tr(color .15s ease-in)
-			&:hover
-				color: #22273b
+	&__line
+		position: absolute
+		bottom: -53px
+		z-index: 1
+		height: 5px
+		transition: transform .25s linear, width .25s ease-in, opacity .4s
+		background-color: $blue
+		opacity: 0
+		pointer-events: none
+		&.is-init
+			opacity: 1
 
 /* call-me
 	----------------------------------- */
@@ -102,6 +127,6 @@
 			background-image: linear-gradient(to right, rgba(#fff, .4) 50%, transparent 50%)
 			background-position: 100% 100%
 			background-size: 7px 1px
-			&:hover
-				background-image: none
-				color: $white
+		&:hover
+			background-image: none
+			color: $white

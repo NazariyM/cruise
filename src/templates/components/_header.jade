@@ -16,9 +16,18 @@
 						+e.A.list-link(href='#!') Новости
 					+e.LI.list-item
 						+e.A.list-link(href='#!') Контакты
-			+b.location.header__location
-				+e.UL
-					+e.LI Самара
+			+b.dropdown.js-dropdown.header__location
+				+e.visible.js-dropdown-open
+					+e.text Самара
+					+icon('icon-down')
+				+e.list
+					+e.UL
+						+e.LI
+							+e.A(href='#!') Самара
+						+e.LI
+							+e.A(href='#!') Москва
+						+e.LI
+							+e.A(href='#!') Саратов
 
 	+e.screen
 		+e.screen-picture(style='background-image: url(img/bg/screen_bg.jpg)')
@@ -26,13 +35,14 @@
 			+b.A(href='#!').logo.header__logo
 				+e.IMG(src='img/logo.png').img
 			+b.menu.header__menu
-				+e.UL.list
-					+e.LI.list-item
+				+e.UL.list.js-menu
+					+e.LI.list-item.is-active
 						+e.A.list-link(href='#!') Круизы
 					+e.LI.list-item
 						+e.A.list-link(href='#!') Туры по России и СНГ
 					+e.LI.list-item
 						+e.A.list-link(href='#!') Международные туры
+					+e.LI.line.js-moving-line
 			+b.call-me.header__call-me
 				+e.A(href='tel:88463327555').number 8 (846) 332-75-55
 				+e.BUTTON(type='button').btn.link-decor

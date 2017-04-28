@@ -1,0 +1,63 @@
+.dropdown
+	position: relative
+	color: $blue
+	transition: color 0.25s ease
+	user-select: none
+	+hover
+		&:before
+			transform: translate3d(0, 0, 0) scaleX(1)
+	&.is-open
+		.dropdown
+			&__list
+				opacity: 1
+				visibility: visible
+		&:before
+			transform: translate3d(0, 0, 0) scaleX(1)
+		.icon-down
+			transform: translate3d(0, 0, 0) rotate(180deg)
+	&__visible
+		position: relative
+		display: inline-block
+		vertical-align: top
+		cursor: pointer
+	&__text
+		padding: 3px 13px 3px 0
+		+text-overflow
+		font-size: 16px
+		padding-bottom: 1px
+		background-color: transparent
+		background-image: linear-gradient(to right, rgba($blue, .6) 50%, transparent 50%)
+		background-position: 100% 100%
+		background-size: 9px 1px
+		background-repeat: repeat-x
+	.icon-down
+		position: absolute
+		top: 50%
+		+tr(fill)
+		right: 0
+		margin-top: -2px
+		fill: $blue
+		font-size: 4px
+		transition: transform 0.25s ease
+	&__list
+		position: absolute
+		z-index: 2
+		top: 100%
+		right: -10px
+		opacity: 0
+		visibility: hidden
+		background: #22273b
+		transition: opacity 0.25s ease, visibilty 0.25s ease
+		a
+			display: block
+			padding: 0 12px
+			color: $white
+			line-height: 27px
+			text-align: center
+			transition: background 0.25s ease, color 0.25s ease
+			cursor: pointer
+			font-size: 15px
+			white-space: nowrap
+			&:hover
+				color: $white
+				background: $blue

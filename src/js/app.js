@@ -3,4 +3,5 @@
 //=include lib/svgxuse.min.js
 //=include lib/fancybox.min.js
 //=include lib/slick.min.js
+//=include components/dropdown.js
 //=include common.js

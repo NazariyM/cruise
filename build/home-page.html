@@ -28,10 +28,16 @@
                 <li class="nav__list-item"><a href="#!" class="nav__list-link">Контакты</a></li>
               </ul>
             </div>
-            <div class="location header__location">
-              <ul>
-                <li>Самара</li>
-              </ul>
+            <div class="dropdown js-dropdown header__location">
+              <div class="dropdown__visible js-dropdown-open">
+                <div class="dropdown__text">Самара</div><svg class="icon-down"><use xlink:href="img/sprite.svg#icon-down"></use></svg></div>
+              <div class="dropdown__list">
+                <ul>
+                  <li><a href="#!">Самара</a></li>
+                  <li><a href="#!">Москва</a></li>
+                  <li><a href="#!">Саратов</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -40,10 +46,11 @@
           <div class="header__container container">
             <a href="#!" class="logo header__logo"><img src="img/logo.png" class="logo__img" alt="" role="presentation" /></a>
             <div class="menu header__menu">
-              <ul class="menu__list">
-                <li class="menu__list-item"><a href="#!" class="menu__list-link">Круизы</a></li>
+              <ul class="menu__list js-menu">
+                <li class="menu__list-item is-active"><a href="#!" class="menu__list-link">Круизы</a></li>
                 <li class="menu__list-item"><a href="#!" class="menu__list-link">Туры по России и СНГ</a></li>
                 <li class="menu__list-item"><a href="#!" class="menu__list-link">Международные туры</a></li>
+                <li class="menu__line js-moving-line"></li>
               </ul>
             </div>
             <div class="call-me header__call-me"><a href="tel:88463327555" class="call-me__number">8 (846) 332-75-55</a><button type="button" class="call-me__btn link-decor"><span>Перезвоните мне</span></button></div><a href="#!" class="header__pick-btn btn">Подобрать тур</a></div>
