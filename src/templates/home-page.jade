@@ -84,7 +84,7 @@ block content
 
 		include components/_features
 		include components/_look
-		//end rest
+	//end rest
 
 	//- cabin-types section
 	-
@@ -110,7 +110,7 @@ block content
 	//- contact section
 	-
 		var contact = {
-		classMod: '_default _bg-2',
+		classMod: '_bg-2',
 		title: 'Нужна помощь? Поможем с выбором!',
 		descr: 'Оставьте заявку и менеджер свяжется с вами, чтобы подобрать вам индивидуальную программу отдыха по вашим финансовым возможностям и предпочтениям',
 		formTimeField: true
@@ -118,35 +118,37 @@ block content
 	include components/_contact
 
 	//- fun section
-	-
-		var fun = {
-		classMod: '_default',
-		title: 'Развлечения найдутся для каждого'
-		}
-		var funRow = [{
-		icon: 'restaurant',
-		text: 'Ресторан'
-		},{
-		icon: 'disco',
-		text: 'Диско-бар'
-		},{
-		icon: 'conference',
-		text: 'Конференц зал'
-		},{
-		icon: 'horse',
-		text: 'Детская комната'
-		},{
-		icon: 'masterclass',
-		text: 'Мастер-классы'
-		}]
-	include components/_fun
+	+b.SECTION.fun
+		+b.sect-title
+			+e.container.container
+				+b.H2.title-md РАЗВЛЕЧЕНИЯ НАЙДУТСЯ ДЛЯ КАЖДОГО
+		-
+			var featuresClass = '_fun'
+			var featuresList = [{
+			descr: 'Ресторан',
+			picMod: 'restaurant'
+			},
+			{
+			descr: 'Диско-бар',
+			picMod: 'disco'
+			},
+			{
+			descr: 'Конференц зал',
+			picMod: 'conference'
+			},
+			{
+			descr: 'Детская комната',
+			picMod: 'horse'
+			},
+			{
+			descr: 'Мастер-классы',
+			picMod: 'masterclass'
+			}];
+		include components/_features
 
-	-
-		var view = {
-		classMod: '_default'
-		}
-		var viewSlider = [{ img: '1'},{ img: '2'},{img: '3'},{img: '4'},{img: 'big'},{img: '1'}]
-	include components/_view
+		-
+			var viewSlider = [{ img: '1'},{ img: '2'},{img: '3'},{img: '4'},{img: 'big'},{img: '1'}]
+		include components/_view
 
 
 	//begin restaurant
@@ -185,7 +187,7 @@ block content
 			var featuresList = [{
 			descrTopBold: '3-разовое питание',
 			descr: 'завтрак, обед и ужин в одну смену.',
-			picMod: 'restaurant'
+			picMod: 'nutrition'
 			},
 			{
 			descrTopBold: 'Заказное меню',
@@ -193,7 +195,7 @@ block content
 			picMod: 'menu'
 			},
 			{
-			descrTopBold: 'Для отдыхающих, к оторые придерживаются диеты или предпочитают пишу “халяль”,',
+			descrTopBold: 'Для отдыхающих, которые придерживаются диеты или предпочитают пишу “халяль”,',
 			descr: 'наши повара приготовятспециальные блюда. Для самых маленьких путешественников можно заказать блюда из “Детского меню”.',
 			picMod: 'diet'
 			},
@@ -210,12 +212,15 @@ block content
 		include components/_features
 	//end restaurant
 
+	//- bar section
+	-
+		var barClass = '_default';
 	include components/_bar
 
 	//- contact section
 	-
 		var contact = {
-		classMod: '_default _bg-3',
+		classMod: '_bg-3',
 		title: 'Есть вопрос по меню? Поможем!',
 		descr: 'Оставьте заявку и менеджер свяжется с вами, чтобы ответить на все ваши вопросы',
 		formTimeField: true
@@ -267,7 +272,7 @@ block content
 				colMod: 'sm',
 				pic: '6',
 				title: 'Цветы востока',
-				descr: 'Просто текст без смысла'
+				descr: 'Создаём цветы из лент собственными руками'
 				},
 				{
 				colMod: 'md',
@@ -308,7 +313,7 @@ block content
 	//- contact section
 	-
 		var contact = {
-		classMod: '_default _bg-4',
+		classMod: '_bg-4',
 		title: 'Есть вопрос по развлечениям? Поможем!',
 		descr: 'Оставьте заявку и менеджер свяжется с вами, чтобы ответить на все ваши вопросы',
 		formTimeField: true
@@ -325,7 +330,7 @@ block content
 	//- contact section
 	-
 		var contact = {
-		classMod: '_default _bg-5',
+		classMod: '_bg-5',
 		title: 'Есть вопрос по экскурсионным турам? Поможем!',
 		descr: 'Оставьте заявку и менеджер свяжется с вами, чтобы подобрать вам подходящий экскурсионный тур',
 		formTimeField: true

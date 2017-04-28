@@ -6,7 +6,7 @@ if testimonials ? testimonials : testimonials = []
 		+e.H2.title Мы организовали отдых уже
 			= ' '
 			+e.STRONG 786 клиентам
-		+e.slider.js-testimonials-slider.owl-carousel
+		+e.slider.js-testimonials-slider
 			mixin testimonialsItem(item)
 				+e.slider-item
 					+e.BLOCKQUOTE.slider-text= item.text
@@ -22,5 +22,5 @@ if testimonials ? testimonials : testimonials = []
 			each item in testimonialsSlider
 				+testimonialsItem(item)
 		+e.more
-			+e.A(href='#!').btn.btn-transparent._border Еще отзывы
+			+e.A(href='#!').more-btn.btn-transparent._border Еще отзывы
 //end organize

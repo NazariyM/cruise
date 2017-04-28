@@ -1,7 +1,9 @@
 .restaurant
 	background-color: #f4f4f4
+	&_default
+		padding: 32px 0 43px
 	&__row
-		padding: 25px 0
+		padding: 35px 0
 		+clr
 	&__person
 		float: left
@@ -14,7 +16,7 @@
 			&::after
 				position: absolute
 				top: -5%
-				right: -45%
+				right: -42%
 				width: 58.1%
 				height: 43.9%
 				z-index: 1
@@ -32,10 +34,13 @@
 			height: 100%
 		&-text
 			display: inline-block
-			vertical-align: middle
-			width: calc(100% - 250px)
+			vertical-align: sub
+			width: calc(100% - 270px)
 			padding-left: 30px
 		&-name
 			+f('cb', 20)
 		&-pos
 			font-size: 16px
+			
+	&__person:nth-child(2n) &__person-text
+		padding-left: 45px

@@ -6,47 +6,94 @@ if excursion ? excursion : excursion = []
 		+e.container.container
 			+b.H2.title-md= excursion.title
 	+e.map-wrap
-		+e.map.js-excursion-map
-		+e.map-cities
-			+e.map-in
-				-
-					var mapList = [{
-					text: 'Нижнний Новгород'
-					},{
-					text: 'Астрахань'
-					},{
-					text: 'Волгоград'
-					},{
-					text: 'Винновка'
-					},{
-					text: 'Москва'
-					},{
-					text: 'Кострома'
-					},{
-					text: 'Ярославль'
-					},{
-					text: 'Чебоксары'
-					},{
-					text: 'Казань'
-					},{
-					text: 'Углич'
-					},{
-					text: 'Городец'
-					},{
-					text: 'Нижнекамск'
-					},{
-					text: 'Самара'
-					},{
-					text: 'Балаково'
-					},{
-					text: 'Саратов'
-					}];
-				+e.UL.map-list
-					mixin mapListItem(item)
-						+e.LI
-							+e.BUTTON(type='button')= item.text
-					each item in mapList
-						+mapListItem(item)
+		+e.map#js-excursion-map
+		+e.cities
+			+e.cities-in
+				+e.UL.cities-list.js-excursion-tabs-nav
+					+b.LI.is-active
+						+e.BUTTON(type='button') Нижнний Новгород
+					+e.LI
+						+e.BUTTON(type='button') Винновка
+					+e.LI
+						+e.BUTTON(type='button') Ярославль
+					+e.LI
+						+e.BUTTON(type='button') Углич
+					+e.LI
+						+e.BUTTON(type='button') Самара
+					+e.LI
+						+e.BUTTON(type='button') Астрахань
+					+e.LI
+						+e.BUTTON(type='button') Москва
+					+e.LI
+						+e.BUTTON(type='button') Чебоксары
+					+e.LI
+						+e.BUTTON(type='button') Городец
+					+e.LI
+						+e.BUTTON(type='button') Балаково
+					+e.LI
+						+e.BUTTON(type='button') Волгоград
+					+e.LI
+						+e.BUTTON(type='button') Кострома
+					+e.LI
+						+e.BUTTON(type='button') Казань
+					+e.LI
+						+e.BUTTON(type='button') Нижнекамск
+					+e.LI
+						+e.BUTTON(type='button') Саратов
 
+	+e.data
+		+e.container.container
+			+e.UL.data-list.js-excursion-tabs-data
+				+e.LI.data-item
+					-
+						var list = {
+						listClassMod: '_excursion',
+						listTitle: 'Нижний новгород:'
+						};
+						var listText = [{
+						text: '“Город над Волгой и Окой” (3 часа)'
+						},{
+						text: 'Поездка в г. Городец (7 часов)'
+						},{
+						text: 'Поездка в г. Семёнов (7 часов)'
+						},{
+						text: 'Поездка в г. Семёнов и возвращением в г. Городец (6 часов)'
+						},{
+						text: 'Поездка в Серафимо-Дивеевский Свято-Троицкий женский монастырь “Четвертый удел Божьей Матери на Замле” (с посещением святых источников) и возвращением в г. Городец (12 часов)'
+						}];
 
+						var viewClass = '_excursion';
+						var viewSlider = [{ img: '5'},{ img: '6'},{img: '7'},{img: '8'},{img: 'big'},{img: '1'}]
+
+					include _list
+					include _view
+				+e.LI.data-item
+					-
+						var list = {
+						listClassMod: '_excursion',
+						listTitle: 'Винновка:'
+						};
+						var listText = [{
+						text: '“Город над Волгой и Окой” (3 часа)'
+						},{
+						text: 'Поездка в г. Городец (7 часов)'
+						},{
+						text: 'Поездка в г. Семёнов (7 часов)'
+						},{
+						text: 'Поездка в г. Семёнов и возвращением в г. Городец (6 часов)'
+						},{
+						text: 'Поездка в Серафимо-Дивеевский Свято-Троицкий женский монастырь “Четвертый удел Божьей Матери на Замле” (с посещением святых источников) и возвращением в г. Городец (12 часов)'
+						}];
+
+						var viewClass = '_excursion';
+						var viewSlider = [{ img: '5'},{ img: '6'},{img: '7'},{img: '8'},{img: 'big'},{img: '1'}]
+
+					include _list
+					include _view
+
+	+e.program
+		+e.container.container
+			+b.A(href='#!').link-decor._has-icon
+				+png('binocular')
+				+e.SPAN Смотреть экскурсионную программу 2017
 //end excursion

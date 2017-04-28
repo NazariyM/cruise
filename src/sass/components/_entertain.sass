@@ -1,15 +1,18 @@
 .entertain
 	background-color: #f4f4f4
 	&_default
-		padding: 0 0 30px
+		padding: 60px 0 30px
 	&__container
 		+clr
 	&__in
 		float: right
 		width: percentage(1116 / 1256)
-		padding: 30px 0 0
+		padding: 35px 0 0
 		&::before
+			position: relative
+			left: 6px
 			float: right
+			margin-top: -10px
 			margin-left: -25px
 			width: 143px
 			height: 108px
@@ -20,7 +23,7 @@
 		width: percentage(994 / 1116)
 		margin-bottom: 35px
 		&-in
-			margin-bottom: 25px
+			margin-bottom: 20px
 		&-pic
 			display: inline-block
 			vertical-align: top
@@ -31,11 +34,12 @@
 			background: $white
 		&-text
 			position: relative
+			z-index: 2
 			display: inline-block
 			vertical-align: top
 			width: percentage(718 / 994)
-			margin-left: 25px
-			padding: 15px 9px 25px 25px
+			margin: 6px 0 0 25px
+			padding: 12px 5px 25px 22px
 			background: $white
 			border-radius: 10px
 			border-left: 2px solid #DCDCDC
@@ -65,8 +69,11 @@
 		&-pos
 			font-size: 16px
 		&-descr
+			line-height: 1.3
 			&:not(:last-child)
 				margin-bottom: 20px
-	&__link
+	&__download
 		text-align: right
-		
+	&__download-link
+		margin-right: 10px
+		font-size: 18px

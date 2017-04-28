@@ -1,24 +1,74 @@
 .excursion
 	&_default
+		padding: 0 0 52px
 		.sect-title
-			background-color: transparent
+			pointer-events: none
+			position: relative
+			z-index: 1
+			padding: 35px 0 15px
+			background: transparent
 	&__map-wrap
-	&__map-cities
+		margin-top: -107px
+	&__map
+		height: 540px
+	&__cities
+		position: relative
+		z-index: 1
+		padding: 25px 0 35px
+		margin-top: -165px
 		background-color: rgba(#fff, .6)
-	&__map-in
-		max-width: 1086px
+	&__cities-in
+		max-width: 1194px
 		margin: 0 auto
 		padding: 0 15px
-	&__map-list
+	&__cities-list
 		font-size: 0
 		li
 			display: inline-block
 			vertical-align: top
 			width: 20%
-			margin-bottom: 15px
+			padding-left: 60px
+			margin-bottom: 17px
+			-webkit-tap-highlight-color: transparent
+			&:nth-child(2),
+			&:nth-child(7),
+			&:nth-child(12),
+			&:nth-child(14)
+				padding-left: 110px
+			&:nth-child(3),
+			&:nth-child(8),
+			&:nth-child(13)
+				padding-left: 120px
+			&:nth-child(4),
+			&:nth-child(9),
+			&:nth-child(14)
+				padding-left: 95px
+			&:nth-child(5),
+			&:nth-child(10),
+			&:nth-child(15)
+				padding-left: 75px
 			button
 				background: none
 				+f('cb', 18)
-				+trs
+				transition: color .2s
 				&:hover
 					color: $blue
+		li.is-active
+			pointer-events: none
+		li.is-active button
+			color: $blue
+	
+	&__data
+		min-height: 712px
+		padding: 35px 0
+		&-list
+	&__program
+		margin-right: 10px
+		text-align: right
+		
+		
+// disable ymap controls
+.ymaps-2-1-50-map-copyrights-promo,
+.ymaps-2-1-50-controls__control,
+.ymaps-2-1-50-copyright
+	display: none!important
