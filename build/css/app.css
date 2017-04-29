@@ -3988,6 +3988,13 @@ strong {
   .sect-title__link{
     display: none;
   }
+  .link-decor_has-icon span{
+    margin-left: 5px;
+  }
+  .link-decor_has-icon .icon{
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
   .dropdown .icon-geo{
     top: 1px;
     font-size: 19px;
@@ -4287,6 +4294,9 @@ strong {
     padding-left: 20px;
     text-align: left;
   }
+  .view__container{
+    max-width: 620px;
+  }
   .view__item-zoom{
     -ms-transform: none;
     transform: none;
@@ -4305,6 +4315,12 @@ strong {
     -ms-transform: none;
     transform: none;
     background: transparent;
+  }
+  .view__slider-arr_prev{
+    left: 5px;
+  }
+  .view__slider-arr_next{
+    right: 5px;
   }
   .restaurant_default{
     padding: 20px 0 10px;
@@ -4365,9 +4381,6 @@ strong {
   .entertain__person-text::before, .entertain__person-text::after{
     display: none;
   }
-  .entertain__download{
-    display: none;
-  }
   .list_entertain{
     padding-left: 15px;
     margin-bottom: 15px;
@@ -4375,8 +4388,14 @@ strong {
   .list_entertain ul li{
     margin-bottom: 10px;
   }
-  .excursion_default{
+  .excursion__map-wrap{
+    margin-top: -87px;
+  }
+  .excursion__cities{
     display: none;
+  }
+  .excursion__program{
+    font-size: 14px;
   }
   .testimonials__title{
     font-size: 32px;
@@ -4438,6 +4457,9 @@ strong {
   }
   .look__item:nth-child(odd){
     padding: 0;
+  }
+  .view__container{
+    max-width: 330px;
   }
   .restaurant__slider-arr{
     top: 27%;

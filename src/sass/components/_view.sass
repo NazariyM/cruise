@@ -1,4 +1,9 @@
 .view
+	&__container
+		+xs
+			max-width: 620px
+		+r(479)
+			max-width: 330px
 	&__item
 		position: relative
 		padding-top: 100%
@@ -48,8 +53,12 @@
 				top: calc(50% - 18px)
 			&_prev
 				left: 14px
+				+xs
+					left: 5px
 			&_next
 				right: 14px
+				+xs
+					right: 5px
 		&-icon
 			fill: $white
 			font-size: 42px
