@@ -4225,7 +4225,7 @@ strong {
     width: 100%;
   }
   .look_rest .look__item:last-child .look__item-pic{
-    padding-top: 50%;
+    padding-top: 60%;
   }
   .look__in{
     text-align: center;
@@ -4264,10 +4264,10 @@ strong {
     white-space: nowrap;
   }
   .look__item_sm .look__item-pic{
-    padding-top: 70%;
+    padding-top: 60%;
   }
   .look__item_md .look__item-pic{
-    padding-top: 70%;
+    padding-top: 60%;
   }
   .cabin-types_default{
     padding: 20px 0 0;
