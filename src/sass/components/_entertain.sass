@@ -2,12 +2,17 @@
 	background-color: #f4f4f4
 	&_default
 		padding: 60px 0 30px
+		+lg
+			padding: 20px 0 35px
 	&__container
 		+clr
 	&__in
 		float: right
 		width: percentage(1116 / 1256)
 		padding: 35px 0 0
+		+md
+			float: none
+			width: 100%
 		&::before
 			position: relative
 			left: 6px
@@ -19,9 +24,14 @@
 			z-index: 1
 			content: ''
 			background: url(../img/bg/img-decor.png) no-repeat 50% 50%/cover
+			+xs
+				display: none
 	&__person
 		width: percentage(994 / 1116)
 		margin-bottom: 35px
+		white-space: nowrap
+		+xs
+			width: 100%
 		&-in
 			margin-bottom: 20px
 		&-pic
@@ -32,6 +42,13 @@
 			border-radius: 50%
 			border: 6px solid $white
 			background: $white
+			+xs
+				display: block
+				margin: 0 auto
+				width: 75%
+				max-width: 225px
+		&-img
+			width: 100%
 		&-text
 			position: relative
 			z-index: 2
@@ -44,6 +61,16 @@
 			border-radius: 10px
 			border-left: 2px solid #DCDCDC
 			border-bottom: 3px solid #DCDCDC
+			white-space: normal
+			+lg
+				margin: 6px 0 0 17px
+			+md
+				width: 71.4%
+				margin: 6px 0 0 5px
+			+xs
+				width: 100%
+				padding: 12px 15px
+				margin: 15px 0 0
 			&::before, &::after
 				top: 10%
 				border: solid transparent
@@ -52,6 +79,8 @@
 				position: absolute
 				pointer-events: none
 				content: ''
+				+xs
+					display: none
 			&::before
 				left: -21px
 				top: 25px
@@ -74,6 +103,7 @@
 				margin-bottom: 20px
 	&__download
 		text-align: right
+		+xs
+			display: none
 	&__download-link
 		margin-right: 10px
-		font-size: 18px

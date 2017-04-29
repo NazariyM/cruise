@@ -2,7 +2,11 @@
 +b.HEADER.header
 	+e.top-line
 		+e.container.container
-			+b.nav.header__nav
+			+b.hamburger.js-hamburger
+				+e.line
+				+e.line
+				+e.line
+			+b.nav.header__nav.js-nav
 				+e.UL.list
 					+e.LI.list-item
 						+e.A.list-link(href='#!') Теплоход Алексей Толстой
@@ -20,6 +24,7 @@
 				+e.visible.js-dropdown-open
 					+e.text Самара
 					+icon('icon-down')
+					+icon('icon-geo')
 				+e.list
 					+e.UL
 						+e.LI
@@ -31,7 +36,7 @@
 
 	+e.screen
 		+e.screen-picture(style='background-image: url(img/bg/screen_bg.jpg)')
-		+e.container.container
+		+e.screen-container.container
 			+b.A(href='#!').logo.header__logo
 				+e.IMG(src='img/logo.png').img
 			+b.menu.header__menu

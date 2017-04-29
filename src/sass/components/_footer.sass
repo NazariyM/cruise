@@ -1,9 +1,22 @@
 .footer
 	padding: 60px 0 40px
 	color: #6f6f6f
+	+lg
+		padding: 35px 0
+	+md
+		position: relative
+		padding: 25px 0 35px
+	+xs
+		padding: 20px 0 35px
 	&__container
 		font-size: 0
 		+justify
+		+lg
+			max-width: 1286px
+		+xs
+			display: flex
+			flex-direction: column
+			align-items: center
 	&__col
 		display: inline-block
 		vertical-align: middle
@@ -11,22 +24,64 @@
 		line-height: 1.2
 		&:nth-child(1)
 			width: percentage(430 / 1256)
+			+md
+				width: 33%
+			+xs
+				width: 100%
+				order: 3
 		&:nth-child(2)
-			width: percentage(160 / 1256)
+			width: 15%
+			+md
+				width: 26%
+			+xs
+				width: 100%
+			+xs
 		&:nth-child(3)
-			width: 35%
+			width: 33.2%
+			+md
+				width: 30%
+			+xs
+				margin: 15px 0
+				width: 100%
 	&__copy
 		font-size: 16px
+		text-align-last: left
+		+md
+			max-width: 260px
+		+xs
+			max-width: none
+			font-size: 15px
+			text-align-last: center
 	&__socials
 		text-align-last: center
+	&__contact
+		+md
+			text-align: right
+			text-align-last: right
+		+xs
+			text-align-last: center
 	&__contact-btn
 		display: inline-block
 		vertical-align: middle
+		padding: 15px 32px
+		+md
+			padding: 10px 17px
 	&__contact-dev
 		display: inline-block
 		vertical-align: middle
-		margin-left: 55px
+		margin-left: 50px
 		font-size: 16px
+		+md
+			display: block
+			position: absolute
+			right: 10px
+			bottom: 7px
+			margin-left: 0
+		+xs
+			bottom: 10px
+			left: 50%
+			transform: translateX(-50%)
+			white-space: nowrap
 		a
 			color: #2d2d2d
 			text-decoration: underline
@@ -42,7 +97,7 @@
 		vertical-align: middle
 		font-size: 16px
 		& + &
-			margin-left: 15px
+			margin-left: 21px
 		svg
 			display: inline-block
 			vertical-align: middle

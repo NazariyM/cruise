@@ -21,7 +21,8 @@
 		vertical-align: top
 		cursor: pointer
 	&__text
-		padding: 3px 13px 3px 0
+		padding: 0 13px 3px 0
+		margin-left: 20px
 		+text-overflow
 		font-size: 16px
 		padding-bottom: 1px
@@ -30,6 +31,17 @@
 		background-position: 100% 100%
 		background-size: 9px 1px
 		background-repeat: repeat-x
+	.icon-geo
+		position: absolute
+		top: 2px
+		left: -3px
+		fill: $white
+		+sm
+			top: 0
+			font-size: 16px
+		+xs
+			top: 1px
+			font-size: 19px
 	.icon-down
 		position: absolute
 		top: 50%
@@ -47,12 +59,13 @@
 		opacity: 0
 		visibility: hidden
 		background: #22273b
+		border-radius: 0 0 3px 3px
 		transition: opacity 0.25s ease, visibilty 0.25s ease
 		a
 			display: block
-			padding: 0 12px
+			padding: 0 20px
 			color: $white
-			line-height: 27px
+			line-height: 30px
 			text-align: center
 			transition: background 0.25s ease, color 0.25s ease
 			cursor: pointer

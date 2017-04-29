@@ -2,17 +2,40 @@
 	background-color: #f4f4f4
 	&_default
 		padding: 32px 0 43px
+		+lg
+			padding: 20px 0 25px
+		+xs
+			padding: 20px 0 10px
 	&__row
 		padding: 35px 0
 		+clr
+		+lg
+			padding: 50px 0 25px
+		+xs
+			padding: 40px 0 0
 	&__person
 		float: left
 		width: 50%
+		white-space: nowrap
+		+sm
+			width: 48%
+			padding: 0 10px
+		+r(599)
+			width: 100%
+			margin-bottom: 20px
 		&-pic-wrap
 			position: relative
 			display: inline-block
 			vertical-align: middle
 			width: percentage(246 / 628)
+			+md
+				width: 35%
+			+sm
+				width: 53%
+				display: block
+				margin: 0 auto
+			+r(599)
+				width: 50%
 			&::after
 				position: absolute
 				top: -5%
@@ -37,10 +60,23 @@
 			vertical-align: sub
 			width: calc(100% - 270px)
 			padding-left: 30px
+			+lg
+				width: calc(100% - 240px)
+			+md
+				width: calc(100% - 180px)
+			+sm
+				margin-top: 10px
+				width: 100%
+				text-align: center
+				padding-left: 0
 		&-name
 			+f('cb', 20)
+			+md
+				font-size: 18px
 		&-pos
 			font-size: 16px
 			
 	&__person:nth-child(2n) &__person-text
 		padding-left: 45px
+		+sm
+			padding-left: 0

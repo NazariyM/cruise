@@ -31,6 +31,8 @@
 			top: calc(50% - 21px)
 			background: none
 			z-index: 3
+			+md
+				top: calc(50% - 18px)
 			&_prev
 				left: 14px
 			&_next
@@ -38,6 +40,8 @@
 		&-icon
 			fill: $white
 			font-size: 42px
+			+md
+				font-size: 36px
 		.owl-prev.disabled .view__slider-icon,
 		.owl-next.disabled .view__slider-icon
 			fill: rgba($white, .7)

@@ -4,11 +4,24 @@
 		flex-direction: column
 		justify-content: center
 		min-height: 530px
-	&__text
+		+lg
+			min-height: 400px
+		+md
+			min-height: 300px
+		+xs
+			min-height: 0
+			padding: 25px 10px
 	&__title
 		margin-bottom: 35px
 		font-size: 40px
 		line-height: 1.2
+		+lg
+			margin-bottom: 20px
+			font-size: 37px
+		+md
+			font-size: 30px
+		+sm
+			font-size: 25px
 	&__descr
 		line-height: (26/18)
 		color: #6f6f6f
@@ -16,18 +29,37 @@
 		position: relative
 	&__map
 		height: 600px
+		+sm
+			height: 400px
+		+xs
+			display: none
 	&__address
 		position: absolute
 		top: 150px
-		left: 320px
+		left: 50%
+		margin-left: -33%
 		z-index: 2
 		padding: 50px 61px 47px
 		background: $white
 		font-style: normal
+		+lg
+			margin-left: -48%
+		+md
+			padding: 30px 40px 35px
+		+sm
+			top: 40px
+			padding: 20px 20px 25px
+		+xs
+			position: static
+			margin: 0
+			background: #F4F4F4
 		&-title
 			margin-bottom: 40px
 			font-size: 26px
 			text-align: center
+			+sm
+				margin-bottom: 20px
+				font-size: 24px
 		&-list
 			padding-left: 32px
 		&-str

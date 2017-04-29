@@ -1,8 +1,20 @@
 body
+	min-width: 320px
 	+f('cr',18)
 	+smooth-font
 	line-height: 1.4
 	color: $grey
+	&.is-locked
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		height: 100%
+		overflow: hidden
+	+lg
+		font-size: 17px
+	+sm
+		font-size: 16px
 
 h1, h2, h3, h4, h5, h6
 	font-weight: normal
@@ -24,7 +36,11 @@ strong
 	max-width: 1286px
 	margin: 0 auto
 	padding: 0 15px
-	
+	+lg
+		max-width: 1200px
+	+sm
+		padding: 0 10px
+
 .btn
 	display: inline-block
 	padding: 15px 43px
@@ -59,12 +75,22 @@ strong
 	color: $grey
 	+f('cb', 40)
 	text-transform: uppercase
-	
+	+lg
+		font-size: 38px
+	+sm
+		font-size: 30px
+	+xs
+		font-size: 20px
+
 .sect-title
 	position: relative
 	padding: 15px 15px 14px
 	border-bottom: 1px solid rgba(#000, .1)
 	text-align: center
+	+lg
+		padding: 10px 15px 10px
+	+md
+		padding: 0 15px 9px
 	&::after
 		position: absolute
 		bottom: 0
@@ -80,8 +106,12 @@ strong
 		right: 15px
 		top: 50%
 		transform: translateY(-50%)
+		+xs
+			display: none
 		span
 			margin-left: 20px
+			+sm
+				margin-left: 5px
 	&_has-link &__text
 		max-width: 700px
 		margin: 0 auto
@@ -89,7 +119,6 @@ strong
 .link-decor
 	display: inline-block
 	vertical-align: middle
-	font-size: 18px
 	color: $grey
 	&:hover
 		color: $blue
@@ -102,8 +131,10 @@ strong
 		background-color: transparent
 		background-image: linear-gradient(to right, rgba($grey, .6) 50%, transparent 50%)
 		background-position: 100% 100%
-		background-size: 9px 2px
+		background-size: 9px 1px
 		background-repeat: repeat-x
+		+sm
+			padding-bottom: 0
 	&_has-icon
 		span
 			margin-left: 10px
@@ -115,7 +146,7 @@ strong
 	color: $grey
 	+placeholder-color(#a8a8a8)
 	border-radius: 3px
-	
+
 // basic transition
 =trs
 	transition: .25s ease-out

@@ -3,25 +3,53 @@
 	&_bg-1
 		padding: 20px 0 28px
 		background-image: url('../img/bg/contact_bg-1.jpg')
+		+sm
+			padding: 15px 0 20px
 	&_bg-2
 		padding: 22px 0 38px
 		background-image: url('../img/bg/contact_bg-2.jpg')
+		+md
+			padding: 15px 0 30px
+		+sm
+			padding: 10px 0 20px
 	&_bg-2 &__descr
 		max-width: 840px
 	&_bg-3
 		padding: 35px 0 47px
 		background-image: url('../img/bg/contact_bg-3.jpg')
+		+md
+			padding: 20px 0 35px
+		+sm
+			padding: 10px 0 20px
 	&_bg-4
 		padding: 37px 0 47px
 		background-image: url('../img/bg/contact_bg-4.jpg')
+		+md
+			padding: 20px 0 35px
+		+sm
+			padding: 10px 0 30px
 	&_bg-5
 		padding: 37px 0 47px
 		background-image: url('../img/bg/contact_bg-5.jpg')
+		+md
+			padding: 20px 0 35px
 	&__title
 		text-align: center
+		+md
+			font-size: 30px
+		+sm
+			font-size: 28px
+		+xs
+			font-size: 25px
 		&_upper
 			text-transform: uppercase
 			font-size: 24px
+			+md
+				font-size: 22px
+			+sm
+				font-size: 20px
+			+xs
+				font-size: 14px
 	&__descr
 		max-width: 890px
 		margin: 0 auto 30px
@@ -29,27 +57,46 @@
 		line-height: (26/20)
 		color: $white
 		text-align: center
+		+lg
+			font-size: 19px
+		+md
+			margin: 0 auto 20px
+			font-size: 17px
+		+sm
+			font-size: 16px
 	&__form-in
 		margin: 17px auto 0
 		max-width: 884px
 		font-size: 0
 		text-align: center
 		+justify
+		+xs
+			text-align: center
 		&_sm
 			max-width: 660px
 		&_sm .contact__form-field
 			width: percentage(210 / 660)
+			+xs
+				width: 80%
 	&__form-field
 		position: relative
 		display: inline-block
 		vertical-align: middle
 		width: percentage(210 / 884)
+		+xs
+			width: 80%
+			&:not(:last-child)
+				margin-bottom: 10px
 		.icon
 			position: absolute
 			top: 12px
 			left: 11px
+			+sm
+			    top: 9px
 	&__form-input
 		padding: 8px 10px 8px 38px
+		+sm
+			padding: 6px 10px 6px 38px
 		&_timepick
 			padding: 8px 28px 8px 38px
 	&__time-btn
@@ -60,7 +107,11 @@
 		.icon-timepick
 			font-size: 16px
 	&__form-btn
+		min-height: 39px
 		width: 100%
 		text-align-last: center
+		+sm
+			min-height: 0
+			padding: 4px 10px 4px 10px
 	
 		

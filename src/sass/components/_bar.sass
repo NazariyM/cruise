@@ -1,20 +1,46 @@
 .bar
 	&_default
 		padding: 50px 0 90px
+		+lg
+			padding: 20px 0 45px
+		+md
+			padding: 20px 0 35px
 	&__row
 		padding: 65px 0 38px
-		+clr
-	&__slider
-		float: left
+		font-size: 0
+		text-align: center
+		+md
+			padding: 40px 0 25px
+	&__slider-wrap
+		display: inline-block
+		vertical-align: middle
 		width: percentage(622 / 1256)
 		&:not(:last-child)
 			margin-right: 10px
+			+sm
+				margin-right: 5px
+			+xs
+				margin-right: 0
+				margin-bottom: 10px
+		+md
+			width: 49.4%
+			border-radius: 5px
+			overflow: hidden
+		+xs
+			width: 90%
+		+r(479)
+			width: 100%
+	
+	&__slider
 		.owl-dots
 			position: absolute
 			right: 38px
 			bottom: 18px
 			z-index: 2
 			+clr
+			+sm
+				right: 15px
+				bottom: 92%
 		&-dot
 			float: left
 			width: 8px
@@ -29,6 +55,7 @@
 		&-item
 			position: relative
 			padding-top: 65.27%
+			text-align: left
 		&-img
 			+coverdiv
 			+cover
@@ -40,9 +67,17 @@
 			z-index: 2
 			+f('cb', 26)
 			color: $white
+			+md
+				left: 15px
+				right: 125px
+				font-size: 20px
+			+sm
+				right: 15px
 		&-descr
 			font-size: 18px
 			+f('cr')
+			+md
+				font-size: 16px
 	&__text
 		p
 			line-height: 1.3
