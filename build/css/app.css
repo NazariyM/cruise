@@ -4360,6 +4360,7 @@ strong {
   }
   .bar__slider-wrap{
     width: 90%;
+    max-width: 520px;
   }
   .entertain__in::before{
     display: none;
