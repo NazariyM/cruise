@@ -46,44 +46,58 @@
 			margin: 0 -5px
 			flex-wrap: wrap
 			justify-content: space-around
+		+xs
+			display: block
 	&_restaurant &__item
 		width: 20%
 		padding: 0 10px
 		+md
 			padding: 0 3px
 		+sm
-			width: 33.33333% !important
-		+xs
-			width: 50% !important
-		+r(479)
-			width: 100% !important
+			width: 33.33333%
+	&_restaurant &__item-pic
+		+md
+			transform: none
 	&_restaurant &__item:nth-child(1)
 		width: 14%
 		+sm
 			order: 0
+			width: 33.33333%
 	&_restaurant &__item:nth-child(1) &__item-descr
 		max-width: 160px
 	&_restaurant &__item:nth-child(2)
 		width: 23.2%
 		+sm
 			order: 1
+			width: 33.33333%
+		+xs
+			order: 0
 	&_restaurant &__item:nth-child(2) &__item-descr
 		max-width: 220px
 	&_restaurant &__item:nth-child(3)
 		width: 23%
+		+sm
+			width: 33.33333%
 	&_restaurant &__item:nth-child(3) &__item-descr
 		max-width: 274px
 	&_restaurant &__item:nth-child(4)
 		width: 19.5%
+		+sm
+			width: 33.33333%
 	&_restaurant &__item:nth-child(4) &__item-descr
 		max-width: 228px
 	&_restaurant &__item:nth-child(5)
 		width: 18.6%
+		+sm
+			width: 33.33333%
 	&_restaurant &__item:nth-child(5) &__item-descr
 		max-width: 220px
 	&_restaurant &__item-descr
 		max-width: none
 		line-height: 1.1
+		+xs
+			margin-top: 15px
+			max-width: 320px !important
 	&_restaurant span
 		font-size: 16px
 	&__row

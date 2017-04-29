@@ -13,6 +13,23 @@
 			padding: 50px 0 25px
 		+xs
 			padding: 40px 0 0
+	.slick-track
+		display: flex
+		align-items: center
+	&__slider-arr
+		position: absolute
+		top: 50%
+		background: none
+		z-index: 2
+		+r(479)
+			top: 27%
+		&_prev
+			left: 10px
+		&_next
+			right: 10px
+	&__slider-icon
+		fill: $blue
+		font-size: 21px
 	&__person
 		float: left
 		width: 50%

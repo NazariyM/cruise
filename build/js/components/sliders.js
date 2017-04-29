@@ -58,4 +58,39 @@ $(function () {
 			}
 		}]
 	});
+
+	(function () {
+
+		var $restaurantSld = $('.features_restaurant').find('.features__row');
+
+		function initSlider(slider) {
+			initSlickSlider(slider);
+			toggleSlider(767, slider);
+			$(window).resize(function () {
+				toggleSlider(767, slider);
+			});
+
+			function toggleSlider(breakpoint, slider) {
+				if ($(window).width() < breakpoint) {
+					if (!slider.hasClass('slick-initialized')) {
+						initSlickSlider(slider);
+					}
+				} else {
+					slider.slick('unslick');
+				}
+			}
+
+			function initSlickSlider(slider) {
+				slider.slick({
+					infinite: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					prevArrow: '<button type="button" class="restaurant__slider-arr restaurant__slider-arr_prev"><svg class="restaurant__slider-icon icon-arr-sld_l"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld_l"></use></svg></button>',
+					nextArrow: '<button type="button" class="restaurant__slider-arr restaurant__slider-arr_next"><svg class="restaurant__slider-icon icon-arr-sld_r"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-arr-sld_r"></use></svg></button>'
+				});
+			}
+		}
+
+		initSlider($restaurantSld);
+	})();
 });
