@@ -12,6 +12,9 @@
 			transform: scale(.5)
 			transition: transform 0.4s cubic-bezier(0.55, 0.06, 0.68, 0.19), background 0.6s ease-in-out
 			+vertical
+			+xs
+				transform: none
+				background-color: transparent
 		&-zoom-icon
 			display: inline-block
 			vertical-align: middle
@@ -19,9 +22,19 @@
 			opacity: 0
 			transform: scale(.7)
 			transition: transform 0.5s cubic-bezier(0.6, -0.28, 0.74, 0.05), opacity .5s ease-in-out
+			+xs
+				position: absolute
+				bottom: 15px
+				right: 15px
+				font-size: 32px
+				opacity: 1
+				transform: none
 		&:hover &-zoom
 			transform: scale(1)
 			background: rgba(#1095ff, .7)
+			+xs
+				transform: none
+				background: transparent
 		&:hover &-zoom-icon
 			opacity: 1
 			transform: scale(1)

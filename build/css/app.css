@@ -4287,6 +4287,25 @@ strong {
     padding-left: 20px;
     text-align: left;
   }
+  .view__item-zoom{
+    -ms-transform: none;
+    transform: none;
+    background-color: transparent;
+  }
+  .view__item-zoom-icon{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-size: 32px;
+    opacity: 1;
+    -ms-transform: none;
+    transform: none;
+  }
+  .view__item:hover .view__item-zoom{
+    -ms-transform: none;
+    transform: none;
+    background: transparent;
+  }
   .restaurant_default{
     padding: 20px 0 10px;
   }
